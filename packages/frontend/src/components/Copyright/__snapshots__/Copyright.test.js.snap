@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders properly 1`] = `
+<p
+  className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
+>
+  Copyright © 
+  <a
+    className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
+    href="https://ecs.co.uk/"
+    onBlur={[Function]}
+    onFocus={[Function]}
+  >
+    ECS
+  </a>
+   2022
+</p>
+`;

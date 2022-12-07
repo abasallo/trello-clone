@@ -1,0 +1,8 @@
+.idea/
+build/
+node_modules/
+coverage/
+
+.env
+.env.docker
+junit.xml

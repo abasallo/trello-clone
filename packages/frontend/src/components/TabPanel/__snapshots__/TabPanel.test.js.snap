@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Renders properly 1`] = `
+<div
+  aria-labelledby="simple-tab-0"
+  hidden={false}
+  id="simple-tabpanel-0"
+  role="tabpanel"
+>
+  <div
+    className="MuiBox-root MuiBox-root-1"
+  >
+    <p
+      className="MuiTypography-root MuiTypography-body1"
+    />
+  </div>
+</div>
+`;

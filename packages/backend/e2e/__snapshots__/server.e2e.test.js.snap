@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add user 1`] = `
+Object {
+  "data": Object {
+    "addUser": Object {
+      "email": "email",
+      "id": Any<String>,
+      "names": "names",
+      "surnames": "surnames",
+    },
+  },
+}
+`;
+
+exports[`Get user by email 1`] = `
+Object {
+  "data": Object {
+    "getUser": Object {
+      "email": "user@host.tld",
+      "id": "1",
+      "names": "name",
+      "surnames": "surnames",
+    },
+  },
+}
+`;
