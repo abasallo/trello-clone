@@ -6,7 +6,7 @@ import { database, model } from '../src/server-helper'
 import { addUserPayload, getUserPayload } from '../src/services/User'
 
 import typeDefs from '../src/graphql/schema'
-
+// TODO - Fix these tests
 // TODO - Add a better / cleaner way to disable authentication, without partial duplication of resolvers
 const resolvers = {
   Query: {

@@ -6,15 +6,17 @@ import HttpStatus from 'http-status-codes'
 
 import { afterAll, beforeAll, expect } from '@jest/globals'
 
-import { server } from './server-helper'
+import { app } from './server-helper'
 
 import { initializeModel } from './orm/model'
 import { closeSequelize, connectWithOptions } from './orm/sequelize'
 
 import axios from 'axios'
 
+// TODO - Fix these tests
+
 beforeAll(async () => {
-	await server.listen(constants.DEFAULT_E2E_SERVER_PORT)
+	await app.listen(constants.DEFAULT_E2E_SERVER_PORT)
 	const sequelize = await connectWithOptions(
 		process.env.DATABASE_DIALECT,
 		process.env.DATABASE_PATH_TEST,
@@ -22,7 +24,7 @@ beforeAll(async () => {
 		process.env.DATABASE_POOL_MIN,
 		process.env.DATABASE_POOL_IDLE
 	)
-	await initializeModel(sequelize)
+	initializeModel(sequelize)
 	await sequelize.sync({ force: true })
 })
 

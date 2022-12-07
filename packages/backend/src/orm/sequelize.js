@@ -9,7 +9,7 @@ import { initializeData } from './bootstrap'
 
 const connectWithUrl = (url) => new Sequelize(url, { logging: false })
 
-const connectWithOptions = (dbDialect, dbPath, dbPoolMax, dbPoolMin, dbPoolIdle) => {
+export const connectWithOptions = (dbDialect, dbPath, dbPoolMax, dbPoolMin, dbPoolIdle) => {
   return new Sequelize({
     dialect: dbDialect,
     storage: dbPath,

@@ -30,13 +30,13 @@ Object {
                 "kind": "Argument",
                 "name": Object {
                   "kind": "Name",
-                  "value": "jwt",
+                  "value": "token",
                 },
                 "value": Object {
                   "kind": "Variable",
                   "name": Object {
                     "kind": "Name",
-                    "value": "jwt",
+                    "value": "token",
                   },
                 },
               },
@@ -169,7 +169,7 @@ Object {
             "kind": "Variable",
             "name": Object {
               "kind": "Name",
-              "value": "jwt",
+              "value": "token",
             },
           },
         },
@@ -238,7 +238,7 @@ Object {
   ],
   "kind": "Document",
   "loc": Object {
-    "end": 224,
+    "end": 231,
     "start": 0,
   },
 }

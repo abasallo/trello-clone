@@ -2,7 +2,7 @@
 
 exports[`Renders properly 1`] = `
 <div
-  className="MuiContainer-root sc-bdnylx hXKTtf MuiContainer-maxWidthLg"
+  className="MuiContainer-root sc-bcXHqe cRUrlQ MuiContainer-maxWidthLg"
 >
   <div
     className="MuiTabs-root"
@@ -175,7 +175,7 @@ exports[`Renders properly 1`] = `
     role="tabpanel"
   />
   <div
-    className="MuiBox-root MuiBox-root-6 sc-dlnjPT eLntHy"
+    className="MuiBox-root MuiBox-root-6 sc-gswNZR eKMYgE"
   >
     <p
       className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"
@@ -183,13 +183,13 @@ exports[`Renders properly 1`] = `
       Copyright © 
       <a
         className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
-        href="https://ecs.co.uk/"
+        href="https://www.linkedin.com/in/abasallo/"
         onBlur={[Function]}
         onFocus={[Function]}
       >
-        ECS
+        alvaro@basallo.es
       </a>
-       2020
+       2022
     </p>
   </div>
 </div>

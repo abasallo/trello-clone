@@ -7,11 +7,11 @@ exports[`Renders properly 1`] = `
   Copyright © 
   <a
     className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorInherit"
-    href="https://ecs.co.uk/"
+    href="https://www.linkedin.com/in/abasallo/"
     onBlur={[Function]}
     onFocus={[Function]}
   >
-    ECS
+    alvaro@basallo.es
   </a>
    2022
 </p>
