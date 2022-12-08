@@ -7,18 +7,14 @@ workflows:
   build_and_push_image:
     jobs:
       - aws-ecr/build-and-push-image:
-          dockerfile: Dockerfile
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-cli-version: latest
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          path: ./packages/backend
-          profile-name: default
-          repo: backend
+          aws-access-key-id: ${AWS_ACCESS_KEY_ID}
+          aws-secret-access-key: ${AWS_SECRET_ACCESS_KEY}
           region: ${AWS_REGION}
-          registry-id: AWS_ECR_REGISTRY_ID
+          dockerfile: Dockerfile
+          path: ./packages/backend
           tag: 'latest'
           push-image: true
-          platform: linux/amd64
+          account-url: ${AWS_ECR_ACCOUNT_URL}
       - aws-ecs/deploy-service-update:
           cluster: 'my-cluster'
           container-image-name-updates: 'container=aws-monorepo-backend,tag=latest'
