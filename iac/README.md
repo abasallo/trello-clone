@@ -19,3 +19,8 @@ Run `terraform apply` to bring up the infrastructure or apply any changes.
 
 Run `terraform destroy` to tear down the infrastructure. This can take a while if CloudFront is an
 active resource. **Don't run this unless you mean to destroy everything**
+
+# References
+
+- [How to Deploy a Dockerised Application on AWS ECS With Terraform](https://medium.com/avmconsulting-blog/how-to-deploy-a-dockerised-node-js-application-on-aws-ecs-with-terraform-3e6bceb48785)
+- [Circle CI with AWS ECS](https://medium.com/@areeb40/circle-ci-with-aws-ecs-d0e148ca331d)
