@@ -9,7 +9,6 @@ workflows:
       - aws-ecr/build-and-push-image:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          region: AWS_REGION
           dockerfile: Dockerfile
           path: ./packages/backend
           tag: 'latest'
