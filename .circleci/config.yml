@@ -1,3 +1,4 @@
+# TODO - Add proper ENV VAR configuration and CircleCI to some README.
 version: 2.1
 
 orbs:
@@ -7,17 +8,10 @@ workflows:
   build_and_push_image:
     jobs:
       - aws-ecr/build-and-push-image:
-          aws-access-key-id: AWS_ACCESS_KEY_ID
-          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
-          dockerfile: Dockerfile
           path: ./packages/backend
-          tag: 'latest'
-          push-image: true
-          registry-id: AWS_ECR_REGISTRY_ID
           repo: 'my-first-ecr-repo'
       - aws-ecs/deploy-service-update:
           cluster: 'my-cluster'
-          container-image-name-updates: 'container=aws-monorepo-backend,tag=latest'
           family: 'my-first-task'
           service-name: 'my-first-service'
           requires:
