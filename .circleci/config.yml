@@ -14,7 +14,7 @@ workflows:
           path: ./packages/backend
           tag: 'latest'
           push-image: true
-          account-url: AWS_ECR_ACCOUNT_URL
+          registry-id: AWS_ECR_REGISTRY_ID
           repo: 'my-first-ecr-repo'
       - aws-ecs/deploy-service-update:
           cluster: 'my-cluster'
