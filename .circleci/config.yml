@@ -15,6 +15,7 @@ workflows:
           tag: 'latest'
           push-image: true
           account-url: AWS_ECR_ACCOUNT_URL
+          repo: 'my-first-ecr-repo'
       - aws-ecs/deploy-service-update:
           cluster: 'my-cluster'
           container-image-name-updates: 'container=aws-monorepo-backend,tag=latest'
