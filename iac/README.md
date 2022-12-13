@@ -11,6 +11,9 @@
 
 # Usage
 
+A bucket with the name abasallo-free-1-terraform-state (check main.ts for the actual name and region) is required to store the terraform state. 
+The bucket must be created manually.
+
 To start with all the modules need initialisation so run `terraform init` to do that.
 
 Run `terraform plan` to check the configuration files are valid and all variables have been declared.
@@ -23,6 +26,3 @@ active resource. **Don't run this unless you mean to destroy everything**
 # References
 
 - [How to Deploy a Dockerised Application on AWS ECS With Terraform](https://medium.com/avmconsulting-blog/how-to-deploy-a-dockerised-node-js-application-on-aws-ecs-with-terraform-3e6bceb48785)
-- [Circle CI with AWS ECS](https://medium.com/@areeb40/circle-ci-with-aws-ecs-d0e148ca331d)
-- [Circle CI - ECR Orb - build-and-push-image](https://circleci.com/developer/orbs/orb/circleci/aws-ecr#commands-build-and-push-image)
-- [Circle CI - ECS Orb - deploy-service-update](https://circleci.com/developer/orbs/orb/circleci/aws-ecs#usage-deploy-service-update)
