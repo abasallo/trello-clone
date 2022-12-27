@@ -10,7 +10,7 @@ const User = (sequelize) =>
 const Make = (sequelize) =>
   sequelize.define('make', {
     id: { type: Sequelize.UUID, defaultValue: Sequelize.UUIDV4, primaryKey: true },
-    name: { type: Sequelize.STRING },
+    name: { type: Sequelize.STRING }
   })
 
 const Model = (sequelize) =>
@@ -18,7 +18,7 @@ const Model = (sequelize) =>
     id: { type: Sequelize.UUID, defaultValue: Sequelize.UUIDV4, primaryKey: true },
     makeId: { type: Sequelize.STRING },
     name: { type: Sequelize.STRING },
-    similarSoundingWordToNameParagraph: { type: Sequelize.STRING },
+    similarSoundingWordToNameParagraph: { type: Sequelize.STRING }
   })
 
 const Car = (sequelize) =>
@@ -26,7 +26,7 @@ const Car = (sequelize) =>
     id: { type: Sequelize.UUID, defaultValue: Sequelize.UUIDV4, primaryKey: true },
     modelId: { type: Sequelize.STRING },
     colour: { type: Sequelize.STRING },
-    year: { type: Sequelize.STRING },
+    year: { type: Sequelize.STRING }
   })
 
 Car.associate = () => Car.belongsTo(Model, { foreignKey: 'modelId', as: 'company' })
