@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     region                  = "eu-west-2"
     bucket                  = "abasallo-free-1-terraform-state"
-    key                     = "aws-monorepo"
+    key                     = "aws-monorepo-backend-ecr+ecs"
     shared_credentials_file = "~/.aws-abasallo-free-1/credentials"
   }
 }
