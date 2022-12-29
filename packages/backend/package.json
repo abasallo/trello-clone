@@ -1,5 +1,5 @@
 {
-  "name": "aws-monorepo-poc-backend",
+  "name": "aws-monorepo-backend",
   "description": "AWS Monorepo POC Backend",
   "version": "0.1.0",
   "private": true,

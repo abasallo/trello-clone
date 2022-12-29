@@ -1,8 +1,9 @@
 version: 2.1
 orbs:
   node: circleci/node@5.0.3
+  aws-s3: circleci/aws-s3@3.1.1
 jobs:
-  install-and-test:
+  frontend-install-test-and-build:
     executor: node/default
     steps:
       - checkout
@@ -11,7 +12,29 @@ jobs:
       - run: yarn
       - run: yarn test
       - run: yarn build
+      - persist_to_workspace:
+          root: .
+          paths:
+           - .
+  frontend-deploy:
+    executor: node/default
+    steps:
+      - attach_workspace:
+          at: .
+      - aws-s3/sync:
+          from: ./packages/frontend/build
+          to: 's3://aws-monorepo-frontend-s3'
+          aws-access-key-id: AWS_ACCESS_KEY_ID
+          aws-region: AWS_REGION
+          aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+
 workflows:
-  install-and-test:
+  front:
     jobs:
-      - install-and-test
+      - frontend-install-test-and-build
+      - frontend-deploy:
+          requires:
+            - frontend-install-test-and-build
+          filters:
+            branches:
+              only: main
