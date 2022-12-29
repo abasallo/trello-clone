@@ -1,17 +1,17 @@
 version: 2.1
-
 orbs:
-  aws-ecr: circleci/aws-ecr@8.1.3
-  aws-ecs: circleci/aws-ecs@3.2.0
+  node: circleci/node@5.0.3
+jobs:
+  install-and-test:
+    executor: node/default
+    steps:
+      - checkout
+      - node/install-packages:
+          pkg-manager: yarn
+      - run: yarn
+      - run: yarn test
+      - run: yarn build
 workflows:
-  build_and_push_image:
+  install-and-test:
     jobs:
-      - aws-ecr/build-and-push-image:
-          path: ./packages/backend
-          repo: 'aws-monorepo-ecr-repo'
-      - aws-ecs/deploy-service-update:
-          cluster: 'aws-monorepo-ecs-cluster'
-          family: 'aws-monorepo-ecs-task'
-          service-name: 'aws-monorepo-ecs-service'
-          requires:
-            - aws-ecr/build-and-push-image
+      - install-and-test
