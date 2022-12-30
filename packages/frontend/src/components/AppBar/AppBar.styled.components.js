@@ -8,7 +8,7 @@ import { customMUITheme as theme } from '../../customMUITheme'
 export const MaterialUIStyledAppBar = styled(MaterialUIAppBar)`
   background-color: #ffffff;
   z-index: ${theme.zIndex.drawer + 1};
-  margin-bottom: 50px;
+  margin-bottom: 40px;
 `
 
 export const Toolbar = styled(MaterialUIToolbar)`

@@ -4,11 +4,16 @@ import MaterialUIContainer from '@material-ui/core/Container'
 import Box from '@material-ui/core/Box'
 
 export const Container = styled(MaterialUIContainer)`
-  margin-top: 25px;
-  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+`
+
+export const Contents = styled(MaterialUIContainer)`
+  flex-grow: 1;
 `
 
 export const CopyrightBox = styled(Box)`
-  margin-top: 25px;
-  text-align: center;
+  flex: none;
+  padding: 10px;
 `
