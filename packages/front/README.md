@@ -29,11 +29,6 @@ You will also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.\
 See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run lint`
-
-Launches the linter in auto fix mode.<br />
-See [eslint.org](https://eslint.org/) for more information.
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
