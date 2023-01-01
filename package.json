@@ -1,7 +1,8 @@
 {
   "name": "aws-monorepo",
   "private": true,
-  "workspaces": ["packages/**"],
+  "workspaces": ["packages/*"],
+  "version": "0.0.0",
   "devDependencies": {
     "lerna": "^4.0.0"
   },
@@ -9,10 +10,10 @@
     "dotenv": "^16.0.0"
   },
   "scripts": {
-    "lint": "lerna run lint",
     "bootstrap": "lerna bootstrap",
     "start": "lerna run start --stream",
     "build": "lerna run build",
-    "test": "lerna run test"
+    "test": "lerna run test",
+    "lint": "lerna run lint"
   }
 }

@@ -7,7 +7,7 @@ export const getUser = async (email) => {
     query: GET_USER,
     variables: {
       token: process.env.REACT_APP_PSK_TOKEN,
-      email: email
+      email
     }
   })
   return data.getUser

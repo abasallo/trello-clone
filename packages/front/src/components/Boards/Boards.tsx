@@ -1,3 +1,6 @@
+// TODO - Replace propTypes with proper typing
+// @ts-nocheck
+
 import React from 'react'
 
 import PropTypes from 'prop-types'
@@ -9,6 +12,7 @@ import { Grid } from '@material-ui/core'
 import { AddButton, Board, BoardsGrid, Container } from './Boards.styled.components'
 
 const Boards = (props) => {
+  // @ts-ignore
   return (
     <Container>
       <BoardsGrid container spacing={2}>
@@ -26,7 +30,7 @@ const Boards = (props) => {
 }
 
 Boards.propTypes = {
-  boards: PropTypes.object
+  boards: PropTypes.array
 }
 
 export default Boards

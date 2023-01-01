@@ -10,6 +10,8 @@ import constants from '../../utils/constants'
 
 import { MaterialUIStyledAppBar, Toolbar, Logo, HeaderLoginButtons } from './AppBar.styled.components'
 
+// TODO - Replace propTypes with proper typing
+// @ts-ignore
 const AppBar = (props) => (
   <MaterialUIStyledAppBar position="static">
     <Toolbar>

@@ -1,6 +1,7 @@
 import React from 'react'
+import './App.css'
 
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
 import { ApolloProvider } from 'react-apollo'
 import { apolloClient } from './services/graphql/apolloClient'
@@ -20,11 +21,9 @@ const App = () => (
       <StylesProvider injectFirst>
         <CssBaseline />
         <Router>
-          <Switch>
-            <Route path={constants.PATH_ROOT}>
-              <Home />
-            </Route>
-          </Switch>
+          <Routes>
+            <Route path={constants.PATH_ROOT} element={<Home />} />
+          </Routes>
         </Router>
       </StylesProvider>
     </MuiThemeProvider>
