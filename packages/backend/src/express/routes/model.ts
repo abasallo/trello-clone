@@ -1,6 +1,6 @@
 import HttpStatus from 'http-status-codes'
 
-import { model as sequelizeModel } from '../../server-helper'
+import { model as sequelizeModel } from '../../app'
 
 import { Router } from 'express'
 

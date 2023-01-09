@@ -16,9 +16,6 @@ import typeDefs from './graphql/schema'
 
 import resolvers from './graphql/resolvers'
 
-import swaggerUI from 'swagger-ui-express'
-import swaggerDocument from '../swagger.json'
-
 export const database = sequelize
 
 export const model = initSequelize()
@@ -32,13 +29,10 @@ app.use(cors())
 app.use(bodyParser.urlencoded({ extended: false }))
 app.use(bodyParser.json())
 
-app.get('/', (req, res) => res.sendFile('/index.html', { root: './public' }))
-app.get('/favicon.ico', (req, res) => res.sendFile('/index.html', { root: './public' }))
-
 app.use('/make', routes.make)
 app.use('/model', routes.model)
 app.use('/car', routes.car)
 
-app.use('/api-docs', swaggerUI.serve, swaggerUI.setup(swaggerDocument))
-
 apolloServer.applyMiddleware({ app })
+
+export default app

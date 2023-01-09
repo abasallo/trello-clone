@@ -1,6 +1,6 @@
 import HttpStatus from 'http-status-codes'
 
-import { model } from '../../server-helper'
+import { model } from '../../app'
 
 import { Router } from 'express'
 

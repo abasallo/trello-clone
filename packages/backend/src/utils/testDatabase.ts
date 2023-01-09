@@ -1,3 +1,5 @@
+// TODO - Proper typings and remove ts-ignore
+// @ts-ignore
 export const initializeTestDatabase = (environment) => {
   process.env.NODE_ENV = environment
   process.env.DATABASE_URL = `sqlite://aws-monorepo-backend-${environment}.test.sqlite`

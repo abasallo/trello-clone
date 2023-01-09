@@ -3,11 +3,10 @@ import 'dotenv/config'
 import { initializeTestDatabase } from '../utils/testDatabase'
 
 import { TestUser } from './bootstrap'
-
-import constants from '../utils/constants'
+import {NODE_DEVELOPMENT_STRING, NODE_PRODUCTION_STRING, NODE_TEST_STRING} from "../utils/constants";
 
 test('Production database must be properly initialized', async () => {
-  const { sequelize, model } = initializeTestDatabase(constants.NODE_PRODUCTION_STRING)
+  const { sequelize, model } = initializeTestDatabase(NODE_PRODUCTION_STRING)
 
   const userCount = await (await model).User.findAndCountAll()
 
@@ -17,7 +16,7 @@ test('Production database must be properly initialized', async () => {
 })
 
 test('Test database must be properly initialized', async () => {
-  const { sequelize, model } = await initializeTestDatabase(constants.NODE_TEST_STRING)
+  const { sequelize, model } = await initializeTestDatabase(NODE_TEST_STRING)
 
   const user = await (await model).User.findOne({ where: { email: 'user@host.tld' } })
 
@@ -29,7 +28,7 @@ test('Test database must be properly initialized', async () => {
 })
 
 test('Dev database must be properly initialized', async () => {
-  const { sequelize, model } = await initializeTestDatabase(constants.NODE_DEVELOPMENT_STRING)
+  const { sequelize, model } = await initializeTestDatabase(NODE_DEVELOPMENT_STRING)
 
   const user = await (await model).User.findOne({ where: { email: 'user@host.tld' } })
 

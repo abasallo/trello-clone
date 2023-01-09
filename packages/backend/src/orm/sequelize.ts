@@ -1,15 +1,20 @@
 import 'dotenv/config'
 
-import constants from '../utils/constants'
-
 import Sequelize from 'sequelize'
 
 import { initializeModel } from './model'
 import { initializeData } from './bootstrap'
+import {NODE_PRODUCTION_STRING, NODE_TEST_STRING} from "../utils/constants";
 
+// TODO - Proper typings and remove ts-ignore
+// @ts-ignore
 const connectWithUrl = (url) => new Sequelize(url, { logging: false })
 
+// TODO - Proper typings and remove ts-ignore
+// @ts-ignore
 export const connectWithOptions = (dbDialect, dbPath, dbPoolMax, dbPoolMin, dbPoolIdle) => {
+  // TODO - Proper typings and remove ts-ignore
+  // @ts-ignore
   return new Sequelize({
     dialect: dbDialect,
     storage: dbPath,
@@ -19,11 +24,11 @@ export const connectWithOptions = (dbDialect, dbPath, dbPoolMax, dbPoolMin, dbPo
 }
 
 export const sequelize = (() => {
-  if (process.env.NODE_ENV === constants.NODE_PRODUCTION_STRING) {
+  if (process.env.NODE_ENV === NODE_PRODUCTION_STRING) {
     return connectWithUrl(process.env.DATABASE_URL)
   }
 
-  if (process.env.NODE_ENV === constants.NODE_TEST_STRING) {
+  if (process.env.NODE_ENV === NODE_TEST_STRING) {
     return connectWithOptions(
       process.env.DATABASE_DIALECT,
       process.env.DATABASE_PATH_TEST,
@@ -43,8 +48,8 @@ export const sequelize = (() => {
 })()
 
 export const initSequelize = async () => {
-  const model = await initializeModel(await sequelize)
-  await sequelize.sync({ force: !(process.env.NODE_ENV === constants.NODE_PRODUCTION_STRING) })
+  const model = initializeModel(await sequelize)
+  await sequelize.sync({ force: !(process.env.NODE_ENV === NODE_PRODUCTION_STRING) })
   await initializeData(model, process.env.NODE_ENV)
   return model
 }

@@ -1,7 +1,8 @@
 import { AuthenticationError } from 'apollo-server-errors'
+import { PSK_TOKEN_NOT_VALID } from "./constants";
 
-import constants from './constants'
-
+// TODO - Proper typings and remove ts-ignore
+// @ts-ignore
 export const executeAroundAuthenticated = async (payload, token, ...params) => {
   try {
     if (process.env.PSK_TOKEN === token) {
@@ -10,5 +11,5 @@ export const executeAroundAuthenticated = async (payload, token, ...params) => {
   } catch (e) {
     throw new AuthenticationError(e)
   }
-  throw new AuthenticationError(constants.PSK_TOKEN_NOT_VALID)
+  throw new AuthenticationError(PSK_TOKEN_NOT_VALID)
 }
