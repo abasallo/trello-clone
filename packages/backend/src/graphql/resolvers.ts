@@ -1,14 +1,13 @@
-import { getUser, addUser } from '../services/User'
+import {model} from '../app';
 
-export default {
+import { getBoard, addBoard } from '../services/Board'
+
+// TODO:: Type this
+export const resolvers = {
   Query: {
-    // TODO - Proper typings and remove ts-ignore
-    // @ts-ignore
-    getUser: (parent, { token, email }, { model }) => getUser(token, email, model)
+    getBoard: (parent: any, args: { id: number }) => getBoard(args.id, model)
   },
   Mutation: {
-    // TODO - Proper typings and remove ts-ignore
-    // @ts-ignore
-    addUser: (parent, { token, user }, { model }) => addUser(token, user, model)
+    addBoard: (parent: any, args: { name: string }) => addBoard(args.name, model)
   }
 }

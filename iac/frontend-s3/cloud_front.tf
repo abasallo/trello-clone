@@ -3,7 +3,7 @@ resource "aws_cloudfront_origin_access_identity" "front_distribution_access_iden
 resource "aws_cloudfront_distribution" "front_distribution" {
   origin {
     domain_name = aws_s3_bucket.front_bucket.bucket_regional_domain_name
-    origin_id   = "aws-monorepo-frontend-cloudfront-origin"
+    origin_id   = "trello-clone-frontend-cloudfront-origin"
 
     s3_origin_config {
       origin_access_identity = aws_cloudfront_origin_access_identity.front_distribution_access_identity.cloudfront_access_identity_path
@@ -17,7 +17,7 @@ resource "aws_cloudfront_distribution" "front_distribution" {
   default_cache_behavior {
     allowed_methods   = ["GET", "HEAD"]
     cached_methods    = ["GET", "HEAD"]
-    target_origin_id  = "aws-monorepo-frontend-cloudfront-origin"
+    target_origin_id  = "trello-clone-frontend-cloudfront-origin"
 
     forwarded_values {
       query_string = false

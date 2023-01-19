@@ -1,6 +1,6 @@
 {
-  "name": "aws-monorepo-frontend",
-  "description": "AWS Monorepo - Frontend",
+  "name": "trello-clone-frontend",
+  "description": "Trello - Clone - Frontend",
   "author": "alvaro@basallo.es",
   "version": "0.1.0",
   "private": true,

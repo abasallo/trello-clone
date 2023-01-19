@@ -2,7 +2,7 @@ terraform {
   backend "s3" {
     region                  = "eu-west-2"
     bucket                  = "abasallo-free-1-terraform-state"
-    key                     = "aws-monorepo-frontend-s3"
+    key                     = "trello-clone-frontend-s3"
     shared_credentials_file = "~/.aws-abasallo-free-1/credentials"
   }
 }

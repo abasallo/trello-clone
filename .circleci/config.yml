@@ -23,7 +23,7 @@ jobs:
           at: .
       - aws-s3/sync:
           from: ./packages/frontend/build
-          to: 's3://aws-monorepo-frontend-s3'
+          to: 's3://trello-clone-frontend-s3'
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-region: AWS_REGION
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY

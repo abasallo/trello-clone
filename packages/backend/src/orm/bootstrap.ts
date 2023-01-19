@@ -1,15 +1,17 @@
-import { NODE_PRODUCTION_STRING } from "../utils/constants";
-
+// TODO - Hash passwords
 export const TestUser = {
-  names: 'name',
-  surnames: 'surnames',
-  email: 'user@host.tld'
+    names: 'name',
+    surnames: 'surnames',
+    email: 'user@host.tld',
+    password: 'password'
 }
 
-// TODO - Proper typings and remove ts-ignore
-// @ts-ignore
-export const initializeData = (model, env) => {
-  if (env !== NODE_PRODUCTION_STRING) {
-    model.User.create(TestUser)
-  }
+export const TestBoard = {
+    name: 'boardName',
+}
+
+// TODO:: Type this
+export const initializeData = async (model: any) => {
+    await model.User.create(TestUser)
+    await model.Board.create(TestBoard)
 }

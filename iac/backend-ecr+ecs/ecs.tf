@@ -1,13 +1,13 @@
 resource "aws_ecs_cluster" "ecs_cluster" {
-  name = "aws-monorepo-ecs-cluster"
+  name = "trello-clone-ecs-cluster"
 }
 
 resource "aws_ecs_task_definition" "ecs_task" {
-  family                   = "aws-monorepo-ecs-task"
+  family                   = "trello-clone-ecs-task"
   container_definitions    = <<DEFINITION
   [
     {
-      "name": "aws-monorepo-ecs-task",
+      "name": "trello-clone-ecs-task",
       "image": "${aws_ecr_repository.ecr_repo.repository_url}",
       "essential": true,
       "portMappings": [
@@ -50,7 +50,7 @@ resource "aws_iam_role_policy_attachment" "ecs_role_policy_attachment" {
 }
 
 resource "aws_ecs_service" "ecs_service" {
-  name            = "aws-monorepo-ecs-service"
+  name            = "trello-clone-ecs-service"
   cluster         = aws_ecs_cluster.ecs_cluster.id
   task_definition = aws_ecs_task_definition.ecs_task.arn
   launch_type     = "FARGATE"

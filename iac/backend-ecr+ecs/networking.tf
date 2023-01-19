@@ -13,7 +13,7 @@ resource "aws_default_subnet" "default_subnet_c" {
 }
 
 resource "aws_alb" "application_load_balancer" {
-  name               = "aws-monorepo-load-balancer"
+  name               = "trello-clone-load-balancer"
   load_balancer_type = "application"
   subnets = [
     aws_default_subnet.default_subnet_a.id,
@@ -40,7 +40,7 @@ resource "aws_security_group" "application_load_balancer_security_group" {
 }
 
 resource "aws_lb_target_group" "application_load_balancer_target_group" {
-  name        = "aws-monorepo-target-group"
+  name        = "trello-clone-target-group"
   port        = 80
   protocol    = "HTTP"
   target_type = "ip"

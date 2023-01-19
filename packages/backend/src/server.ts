@@ -1,7 +1,8 @@
-import awsServerlessExpress from 'aws-serverless-express'
-import { APIGatewayEvent, Context } from 'aws-lambda'
-import app from "./app";
+import {app, model} from './app'
 
-const server = awsServerlessExpress.createServer(app)
+model
+    .then(() => console.log('Database initialised'))
+    .catch((error) => console.error('Database initialisation error: ' + error))
 
-export const handler = (event: APIGatewayEvent, context: Context) => awsServerlessExpress.proxy(server, event, context)
+const port = process.env.PORT || 4000
+app.listen({port}, () => console.log("Server initialised on port: " + port))

@@ -35,7 +35,7 @@ exports[`Renders properly 1`] = `
         <span
           className="MuiButton-label"
         >
-          host@server.tld
+          host@lambda.tld
         </span>
       </button>
       <button

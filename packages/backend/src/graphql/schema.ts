@@ -1,29 +1,25 @@
 import { gql } from 'apollo-server'
 
-export default gql`
+export const typeDefs = gql`
   schema {
     query: Query
     mutation: Mutation
   }
 
   type Query {
-    getUser(token: String, email: String): User
+    getBoard(id: String!): Board
   }
 
   type Mutation {
-    addUser(token: String, user: UserInput!): User
+    addBoard(board: BoardInput!): Board
   }
 
-  type User {
+  type Board {
     id: ID!
-    names: String
-    surnames: String
-    email: String!
+    name: String!
   }
 
-  input UserInput {
-    names: String
-    surnames: String
-    email: String!
+  input BoardInput {
+    name: String!
   }
 `
