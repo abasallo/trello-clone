@@ -7,8 +7,7 @@ export const getBoard = async (id: number, model: any) => {
   return board
 }
 
-// TODO:: Autogenerate IDs with Sequelize
 // TODO:: Type this
-export const addBoard = async (name: string, model: any) => {
-  return (await model).Board.create({ name })
+export const addBoard = async (board: { name: string }, model: any) => {
+  return (await model).Board.create({ name: board.name })
 }
