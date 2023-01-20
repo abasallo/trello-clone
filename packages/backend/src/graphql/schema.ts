@@ -7,7 +7,7 @@ export const typeDefs = gql`
   }
 
   type Query {
-    getBoard(id: String!): Board
+    getBoards: [Board]
   }
 
   type Mutation {
