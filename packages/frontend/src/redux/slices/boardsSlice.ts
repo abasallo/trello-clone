@@ -34,7 +34,7 @@ const initialState: BoardState = [
     }
 ]
 
-export const boardSlice = createSlice({
+const boardSlice = createSlice({
     name: 'boards',
     initialState,
     reducers: {
