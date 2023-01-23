@@ -12,6 +12,8 @@ export const typeDefs = gql`
 
   type Mutation {
     addBoard(board: BoardInput!): Board
+    deleteBoard(id: ID!): Int
+    updateBoard(board: BoardInput!): Board
   }
 
   type Board {
@@ -20,6 +22,7 @@ export const typeDefs = gql`
   }
 
   input BoardInput {
+    id: ID
     name: String!
   }
 `

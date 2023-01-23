@@ -18,4 +18,19 @@ export const ADD_BOARD = gql`
     }
 `
 
+export const UPDATE_BOARD = gql`
+    mutation ($board: BoardInput!) {
+        updateBoard(board: $board) {
+            id,
+            name
+        }
+    }
+`
 
+
+
+export const DELETE_BOARD = gql`
+    mutation ($id: ID!) {
+      deleteBoard(id: $id)
+    }
+`
