@@ -35,7 +35,7 @@ jobs:
           at: .
       - aws-cli/setup:
           profile-name: default
-      - run: aws lambda update-function-code --function-name trello-clone-backend-lambda --zip-file fileb://lambda.zip
+      - run: aws lambda update-function-code --function-name trello-clone-backend-lambda --zip-file fileb://packages/backend/lambda.zip
 
 workflows:
   full-stack-build-test-and-deploy:
