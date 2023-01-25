@@ -2,8 +2,9 @@ version: 2.1
 orbs:
   node: circleci/node@5.0.3
   aws-s3: circleci/aws-s3@3.1.1
+  aws-cli: circleci/aws-cli@3.1
 jobs:
-  frontend-install-test-and-build:
+  install-test-and-build:
     executor: node/default
     steps:
       - checkout
@@ -23,18 +24,32 @@ jobs:
           at: .
       - aws-s3/sync:
           from: ./packages/frontend/build
-          to: 's3://trello-clone-frontend-s3'
+          to: 's3://trello-clone-frontend'
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-region: AWS_REGION
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
+  backend-deploy:
+    executor: aws-cli/default
+    steps:
+      - attach_workspace:
+          at: .
+      - aws-cli/setup:
+          profile-name: default
+      - run: aws lambda update-function-code --function-name trello-clone-backend-lambda --zip-file fileb://lambda.zip
 
 workflows:
-  front:
+  full-stack-build-test-and-deploy:
     jobs:
-      - frontend-install-test-and-build
+      - install-test-and-build
       - frontend-deploy:
           requires:
-            - frontend-install-test-and-build
+            - install-test-and-build
+          filters:
+            branches:
+              only: main
+      - backend-deploy:
+          requires:
+            - install-test-and-build
           filters:
             branches:
               only: main

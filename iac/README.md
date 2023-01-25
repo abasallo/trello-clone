@@ -3,10 +3,10 @@
 # Requirements
 
 - Install (optional) & [configure credentials for AWS CLI](https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-files.html).
-- Terraform v1.3.6 ([https://www.terraform.io/downloads.html]). To be able to install a specific version, tfenv is recommended.
+- Terraform v1.3.7 ([https://www.terraform.io/downloads.html]). To be able to install a specific version, tfenv is recommended.
 - tfenv ([https://github.com/tfutils/tfenv]). To be able to install versions with no darwin_arm64 available, use a Rosetta Terminal.
-  - tfenv install 1.3.6
-  - tfenv use 1.3.6
+  - tfenv install 1.3.7
+  - tfenv use 1.3.7
 - Access to AWS with enough permissions to create and destroy resources
 - Some knowledge of AWS infrastructure
 

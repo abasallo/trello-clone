@@ -1,5 +1,0 @@
-.terraform/
-.idea/
-*.tfvars
-*.log
-.DS_Store

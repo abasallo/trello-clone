@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "front_bucket" {
-  bucket = "trello-clone-frontend-s3"
+  bucket = "trello-clone-frontend"
 }
 
 resource "aws_s3_bucket_acl" "front_bucket_acl" {
