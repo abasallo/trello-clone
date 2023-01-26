@@ -1,9 +1,6 @@
-build/
-node_modules/
-coverage/
-
 .env
 .env.docker
 *.sqlite
 junit.xml
 lambda.zip
+/build-webpack/

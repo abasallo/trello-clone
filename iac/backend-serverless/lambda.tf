@@ -1,7 +1,7 @@
 resource "aws_lambda_function" "backend_lambda" {
   function_name = "trello-clone-backend-lambda"
   filename = "dummy.zip"
-  runtime = "nodejs16.x"
+  runtime = "nodejs18.x"
   role = aws_iam_role.backend_lambda_role.arn
   handler = "index.handler"
 }

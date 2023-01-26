@@ -14,5 +14,8 @@
     "build": "lerna run build",
     "test": "CI=true lerna run test",
     "start": "lerna run start --stream"
+  },
+  "engines" : {
+    "node" : ">=18.0.0 <19.0.0"
   }
 }
