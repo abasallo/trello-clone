@@ -12,8 +12,8 @@ resource "aws_ecs_task_definition" "ecs_task" {
       "essential": true,
       "portMappings": [
         {
-          "containerPort": 3000,
-          "hostPort": 3000
+          "containerPort": 80,
+          "hostPort": 80
         }
       ],
       "memory": 512,
@@ -54,12 +54,12 @@ resource "aws_ecs_service" "ecs_service" {
   cluster         = aws_ecs_cluster.ecs_cluster.id
   task_definition = aws_ecs_task_definition.ecs_task.arn
   launch_type     = "FARGATE"
-  desired_count   = 3
+  desired_count   = 1
 
   load_balancer {
     target_group_arn = aws_lb_target_group.application_load_balancer_target_group.arn
     container_name   = aws_ecs_task_definition.ecs_task.family
-    container_port   = 3000
+    container_port   = 80
   }
 
   network_configuration {

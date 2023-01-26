@@ -4,6 +4,7 @@ import express from 'express'
 import cors from 'cors'
 import bodyParser from 'body-parser'
 
+import index from './express/routes/index'
 import auth from './express/routes/auth'
 
 import {initialiseSequelize} from './orm/sequelize'
@@ -22,6 +23,7 @@ app.use(cors())
 app.use(bodyParser.urlencoded({extended: false}))
 app.use(bodyParser.json())
 
+app.use('/', index)
 app.use('/auth', auth)
 
 export default app
