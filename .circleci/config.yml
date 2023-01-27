@@ -50,21 +50,22 @@ workflows:
           filters:
             branches:
               only: main
-      - aws-ecr/build-and-push-image:
-          path: ./packages/backend
-          repo: 'trello-clone-ecr-repo'
-          requires:
-            - install-test-and-build
-          filters:
-            branches:
-              only: main
-      - aws-ecs/deploy-service-update:
-          cluster: 'trello-clone-ecs-cluster'
-          family: 'trello-clone-ecs-task'
-          service-name: 'trello-clone-ecs-service'
-          requires:
-            - install-test-and-build
-            - aws-ecr/build-and-push-image
-          filters:
-            branches:
-              only: main
+#      - backend-deploy-serverless
+#      - aws-ecr/build-and-push-image:
+#          path: ./packages/backend
+#          repo: 'trello-clone-ecr-repo'
+#          requires:
+#            - install-test-and-build
+#          filters:
+#            branches:
+#              only: main
+#      - aws-ecs/deploy-service-update:
+#          cluster: 'trello-clone-ecs-cluster'
+#          family: 'trello-clone-ecs-task'
+#          service-name: 'trello-clone-ecs-service'
+#          requires:
+#            - install-test-and-build
+#            - aws-ecr/build-and-push-image
+#          filters:
+#            branches:
+#              only: main
