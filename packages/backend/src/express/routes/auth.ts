@@ -11,8 +11,9 @@ const router = Router()
 router.get('/:email', async (req, res) => {
     const email: string = req.params.email
     const password: string = req.body.password
-    const user = getUser(email, password, model)
-    if (!user) res.status(HttpStatus.NOT_FOUND)
+    const user = getUser({email, password, model})
+    if (!user)
+        res.status(HttpStatus.NOT_FOUND)
     // TODO:: This token is hardcoded
     res.send('1234567890')
 })

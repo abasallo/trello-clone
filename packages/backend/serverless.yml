@@ -1,4 +1,0 @@
-custom:
-  bundle:
-    ignorePackages:
-      - pg-native

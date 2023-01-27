@@ -1,19 +1,18 @@
-import 'dotenv/config'
-
 import {Sequelize} from 'sequelize'
 
-import {initializeData} from './bootstrap'
-import {initializeModel} from "./model";
+import {initialiseData} from './initialiseData'
+import {initializeModel} from "./initialiseModel";
+import {AppModel} from "./model/app.model";
 
 const SQLITE_CONNECTION_URL = 'sqlite://trello-clone-backend.sqlite'
 
 const sequelize: Sequelize = new Sequelize(SQLITE_CONNECTION_URL)
 
 // TODO:: Add logging - https://sequelize.org/docs/v6/getting-started/#logging
-export const initialiseSequelize = async () => {
-    const model = await initializeModel(await sequelize)
+export const initialiseSequelize = async (): Promise<AppModel> => {
+    const model: AppModel = initializeModel(sequelize)
     await sequelize.sync();
-    await initializeData(model)
+    await initialiseData(model)
     return model
 }
 

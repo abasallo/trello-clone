@@ -1,14 +1,18 @@
-import { UserInputError } from 'apollo-server-errors'
+import {User} from '../model/user.model'
+import {UserInputError} from 'apollo-server-errors'
+import {AppModel} from '../orm/model/app.model'
 
-// TODO:: Type this
-// TODO:: Named params this
-export const getUser = async (email: string, password: string, model: any) => {
-  const user = (await model).User.findOne({
-    where: {
-      email: email,
-      password: password
-    }
-  })
-  if (!user) throw new UserInputError(`Cannot find a User with email: ${email}, or wrong password.`)
-  return user
+export const getUser = async ({
+    email,
+    password,
+    model
+}: {
+    email: string
+    password: string
+    model: Promise<AppModel>
+}): Promise<User> => {
+    const user = (await model).User.findOne({where: {email, password}})
+    if (!user)
+        throw new UserInputError(`Cannot find a User with email: ${email}, or wrong password.`)
+    return user
 }

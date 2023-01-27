@@ -5,7 +5,7 @@ const path = require("path");
 const webpack = require("webpack");
 
 module.exports = {
-  entry: "./src/index.ts",
+  entry: "./src/lambda.ts",
   mode: "production",
   target: "node",
   module: {
@@ -23,7 +23,7 @@ module.exports = {
   },
   output: {
     filename: "index.js",
-    path: path.resolve(__dirname, "build"),
+    path: path.resolve(__dirname, "build-webpack"),
     libraryTarget: "umd"
   },
   optimization: {

@@ -1,6 +1,6 @@
 # trello-clone-backend
 
-NodeJS + GraphQL w/ Apollo + Sequelize + SQLite / PosgreSQL
+NodeJS + GraphQL w/ Apollo + Sequelize + SQLite
 
 ## Initial configuration
 
@@ -8,7 +8,7 @@ In the project directory, you must copy .env.example as .env a fill missing fiel
 
 In the project directory, you can run:
 
-### `npm install`
+### `yarn`
 
 To download dependencies into node_modules directory.
 
@@ -16,51 +16,31 @@ To download dependencies into node_modules directory.
 
 In the project directory, you can run:
 
-### `npm run lint`
+### `yarn start`
 
-Runs the linter.
+Runs the project locally.
 
-### `npm test`
-
-Launches the runner for Unit & Integration tests.
-
-### `npm run e2e`
-
-Launches the runner for E2E tests.
-
-### `npm run dev`
-
-Runs the app in the development mode.<br />
 Open [http://localhost:4000](http://localhost:4000) to view it in the browser.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+### `yarn debug`
 
-### `npm run debug`
+Runs the project locally in debugger mode.
 
-Runs the app in the development and debug mode.<br />
 Open [http://localhost:4000](http://localhost:3000) to view it in the browser.
 Connect to [http://localhost:9229](http://localhost:9229) to debug.
 
-### `npm run build`
+### `yarn build`
 
-Builds the app for production to the `build` folder.<br />
+Builds the app for production to the `build` folder.
 
-### `npm start`
+### `yarn test`
 
-Runs the app for production (expects real Postgres database and configuration through DATABASE_URL env var).
+Runs unit and integration tests.
 
 ## Docker
 
 This assumes Docker and Docker Compose are installed.
 
-Also, copy and rename .env.docker.example to .env.docker and edit for configuration specifics.
-
-This file contains the configuration to run the index as in production, but with a local Docker (that can be later
-deployed for real).
-
-**DO NOT push real tokens and/or passwords to git, those included in .example are and should be FAKE ones.**
-
 ### `docker-compose up`
 
-Runs containerised index using Docker
+Runs containerised using Docker.

@@ -11,11 +11,3 @@ services:
     env_file:
       - .env.docker
     restart: on-failure
-  postgres:
-    image: postgres:15.1-alpine
-    ports:
-      - 5432:5432
-    environment:
-      - POSTGRES_DB=db
-      - POSTGRES_USER=user
-      - POSTGRES_PASSWORD=password

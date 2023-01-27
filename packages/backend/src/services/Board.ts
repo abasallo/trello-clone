@@ -1,22 +1,41 @@
-// TODO:: Type this
-export const getBoards = async (model: any) => (await model).Board.findAll()
+import {Board} from '../model/board.model'
+import {AppModel} from '../orm/model/app.model'
+import {BoardModel} from "../orm/model/board.model";
+import {UserInputError} from "apollo-server-errors";
 
-// TODO:: Type this
-export const addBoard = async (board: { name: string }, model: any) => {
-  return (await model).Board.create({ name: board.name })
+export const getBoards = async (model: Promise<AppModel>): Promise<Board[]> =>
+    (await model).Board.findAll()
+
+export const addBoard = async ({
+    name,
+    model
+}: {
+    name: string,
+    model: Promise<AppModel>
+}): Promise<Board> =>
+    (await model).Board.create({name})
+
+export const updateBoard = async ({
+    id,
+    name,
+    model
+}: {
+    id: number
+    name: string
+    model: Promise<AppModel>
+}): Promise<Board> => {
+    const board: BoardModel = await (await model).Board.findByPk(id)
+    if (!board)
+        throw new UserInputError(`Cannot find a Board with id: ${id}.`)
+    board.name = name
+    return board.save()
 }
 
-// TODO:: Type this
-export const updateBoard = async (board: { id: number; name: string }, model: any) => {
-    const ormBoard = await (await model).Board.findByPk(board.id)
-    if (ormBoard) {
-        ormBoard.name = board.name
-        ormBoard.save()
-    }
-    return ormBoard
-}
-
-// TODO:: Type this
-export const deleteBoard = async (id: string, model: any) => {
-  return (await model).Board.destroy({ where: {id} })
-}
+export const deleteBoard = async ({
+    id,
+    model
+}: {
+    id: string
+    model: Promise<AppModel>
+}): Promise<number> =>
+    (await model).Board.destroy({where: {id}})
