@@ -44,12 +44,12 @@ workflows:
   full-stack-build-test-and-deploy:
     jobs:
       - install-test-and-build
-      - frontend-deploy:
-          requires:
-            - install-test-and-build
-          filters:
-            branches:
-              only: main
+#      - frontend-deploy:
+#          requires:
+#            - install-test-and-build
+#          filters:
+#            branches:
+#              only: main
 #      - backend-deploy-serverless
 #      - aws-ecr/build-and-push-image:
 #          path: ./packages/backend
