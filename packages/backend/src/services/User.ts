@@ -3,10 +3,10 @@ import {UserInputError} from 'apollo-server-errors'
 import {AppModel} from '../orm/model/app.model'
 
 export const getUser = async ({
-    email,
-    password,
-    model
-}: {
+                                  email,
+                                  password,
+                                  model
+                              }: {
     email: string
     password: string
     model: Promise<AppModel>

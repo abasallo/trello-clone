@@ -14,14 +14,13 @@ const User = (sequelize: Sequelize): ModelStatic<UserModel> =>
     })
 
 
-
 const Board = (sequelize: Sequelize): ModelStatic<BoardModel> =>
     sequelize.define<BoardModel>('Board', {
         id: {type: DataTypes.INTEGER, primaryKey: true, autoIncrement: true},
         name: {type: DataTypes.STRING}
     })
 
-export const initializeModel = (sequelize: Sequelize): AppModel  => ({
+export const initializeModel = (sequelize: Sequelize): AppModel => ({
     User: User(sequelize),
     Board: Board(sequelize)
 })

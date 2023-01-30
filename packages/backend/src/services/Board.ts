@@ -7,19 +7,19 @@ export const getBoards = async (model: Promise<AppModel>): Promise<Board[]> =>
     (await model).Board.findAll()
 
 export const addBoard = async ({
-    name,
-    model
-}: {
+                                   name,
+                                   model
+                               }: {
     name: string,
     model: Promise<AppModel>
 }): Promise<Board> =>
     (await model).Board.create({name})
 
 export const updateBoard = async ({
-    id,
-    name,
-    model
-}: {
+                                      id,
+                                      name,
+                                      model
+                                  }: {
     id: number
     name: string
     model: Promise<AppModel>
@@ -32,9 +32,9 @@ export const updateBoard = async ({
 }
 
 export const deleteBoard = async ({
-    id,
-    model
-}: {
+                                      id,
+                                      model
+                                  }: {
     id: string
     model: Promise<AppModel>
 }): Promise<number> =>
