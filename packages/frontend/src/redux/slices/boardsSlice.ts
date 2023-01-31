@@ -1,33 +1,28 @@
 import {createAsyncThunk, createSlice} from '@reduxjs/toolkit'
 import {addBoard, deleteBoard, getBoards, updateBoard} from '../../services/Board'
 
-// TODO:: Refactor extract / move for the types
-interface Board {
-    id: number
-    name: string
-}
+import {Board} from 'trello-clone-shared/src/model/board.model'
 
 const initialState: Board[] = []
 
 export const fetchBoardsAsyncThunk = createAsyncThunk(
     "boards/fetch",
-    async () => await getBoards()
+    async (): Promise<Board | undefined> => await getBoards()
 )
 
-// TODO:: Type this
 export const addBoardAsyncThunk = createAsyncThunk(
     "boards/add",
-    async () => await addBoard()
+    async (): Promise<Board | undefined> => await addBoard()
 )
 
 export const updateBoardAsyncThunk = createAsyncThunk(
     "boards/update",
-    async (board: { id: number; name: string }) => await updateBoard(board)
+    async (board: Board): Promise<Board | undefined> => await updateBoard(board)
 )
 
 export const deleteBoardAsyncThunk = createAsyncThunk(
     "board/delete",
-    async (id: number) => {
+    async (id: number): Promise<number> => {
         await deleteBoard(id)
         return id
     }

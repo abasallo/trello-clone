@@ -1,32 +1,29 @@
 import React from 'react'
 
-import PropTypes from 'prop-types'
-
 import Button from '@material-ui/core/Button'
 
 import logo from '../../images/logo.png'
 
 import constants from '../../utils/constants'
 
-import { MaterialUIStyledAppBar, Toolbar, Logo, HeaderLoginButtons } from './AppBar.styled.components'
+import {HeaderLoginButtons, Logo, MaterialUIStyledAppBar, Toolbar} from './AppBar.styled.components'
 
-// TODO - Replace propTypes with proper typing
-// @ts-ignore
-const AppBar = (props) => (
-  <MaterialUIStyledAppBar position="static">
-    <Toolbar>
-      <Logo src={logo} alt={constants.LOGO_ALT} />
+import {User} from 'trello-clone-shared/src/model/user.model'
 
-      <HeaderLoginButtons>
-        <Button>{props.user.email}</Button>
-        <Button onClick={() => {}}>{constants.LOGOUT}</Button>
-      </HeaderLoginButtons>
-    </Toolbar>
-  </MaterialUIStyledAppBar>
+const AppBar = (props: {
+    user: User
+}) => (
+    <MaterialUIStyledAppBar position="static">
+        <Toolbar>
+            <Logo src={logo} alt={constants.LOGO_ALT}/>
+
+            <HeaderLoginButtons>
+                <Button>{props.user.email}</Button>
+                <Button onClick={() => {
+                }}>{constants.LOGOUT}</Button>
+            </HeaderLoginButtons>
+        </Toolbar>
+    </MaterialUIStyledAppBar>
 )
-
-AppBar.propTypes = {
-  user: PropTypes.object
-}
 
 export default AppBar

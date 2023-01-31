@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import { Card, Fab, Grid, CardActions } from '@material-ui/core'
+import {Card, CardActions, Fab, Grid} from '@material-ui/core'
 
 import MaterialUIContainer from '@material-ui/core/Container'
 
@@ -12,7 +12,7 @@ export const Container = styled(MaterialUIContainer)`
 export const BoardsGrid = styled(Grid)`
   flex-grow: 1;
 `
-export const Board = styled(Card)`
+export const BoardComponent = styled(Card)`
   padding: 10px;
   margin: 10px;
   min-height: 100px;

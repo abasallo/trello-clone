@@ -28,7 +28,6 @@ export const UPDATE_BOARD = gql`
 `
 
 
-
 export const DELETE_BOARD = gql`
     mutation ($id: ID!) {
       deleteBoard(id: $id)

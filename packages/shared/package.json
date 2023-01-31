@@ -6,7 +6,7 @@
   "author": "alvaro@basallo.es",
   "scripts": {
     "build": "tsc",
-    "test": "jest ./src"
+    "test": "jest ./src --passWithNoTests"
   },
   "dependencies": {
     "@types/jest": "^29.2.5",

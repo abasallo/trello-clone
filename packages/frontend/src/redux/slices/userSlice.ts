@@ -1,11 +1,8 @@
-import { createSlice } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
 
-interface User {
-    names: string
-    surnames: string
-    email: string
-}
+import {User} from 'trello-clone-shared/src/model/user.model'
 
+// TODO:: Replace this by actually going to the backend
 const initialState: User = {
     names: 'Álvaro',
     surnames: 'Basallo Martínez',

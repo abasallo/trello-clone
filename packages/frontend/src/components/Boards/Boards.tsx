@@ -4,38 +4,43 @@ import AddIcon from '@mui/icons-material/Add'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
 
-import {Grid, IconButton, TextField, Chip} from '@material-ui/core'
+import {Chip, Grid, IconButton, TextField} from '@material-ui/core'
 
-import {AddButton, Board, BoardActions, BoardsGrid, Container} from './Boards.styled.components'
+import {AddButton, BoardComponent, BoardActions, BoardsGrid, Container} from './Boards.styled.components'
 
 import {useAppDispatch, useAppSelector} from '../../redux/hooks'
 import {AppDispatch} from '../../redux/store'
-import {addBoardAsyncThunk, deleteBoardAsyncThunk, updateBoardAsyncThunk} from "../../redux/slices/boardsSlice";
+import {addBoardAsyncThunk, deleteBoardAsyncThunk, updateBoardAsyncThunk} from '../../redux/slices/boardsSlice'
+
+import {Board} from 'trello-clone-shared/src/model/board.model'
 
 const addButtonOnClick = (dispatch: AppDispatch): void => {
     dispatch(addBoardAsyncThunk())
 }
-const updateButtonOnClick = (dispatch: AppDispatch, board: { id: number; name: string }): void => {
+const updateButtonOnClick = (dispatch: AppDispatch, board: Board): void => {
     dispatch(updateBoardAsyncThunk(board))
 }
 
-const deleteButtonOnClick = (dispatch: AppDispatch, id: number): void => {
-    dispatch(deleteBoardAsyncThunk(id))
+const deleteButtonOnClick = (dispatch: AppDispatch, id?: number): void => {
+    if (id)
+        dispatch(deleteBoardAsyncThunk(id))
 }
 
 const Boards = () => {
 
-    const [editMode, setEditMode] = useState(false);
+    const [editMode, setEditMode] = useState(false)
 
     const state = useAppSelector(state => state)
-    const dispatch: AppDispatch = useAppDispatch();
+    const dispatch: AppDispatch = useAppDispatch()
+
+    const boards: Board[] = state.boards
 
     return (
         <Container>
             <BoardsGrid container spacing={2}>
-                {state.boards.map((board) => (
+                {boards.map((board) => (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={board.id}>
-                        <Board>
+                        <BoardComponent>
                             {
                                 editMode
                                     ? <TextField id="standard-basic" label="Standard" variant="standard"
@@ -48,7 +53,7 @@ const Boards = () => {
                                                      setEditMode(false)
                                                  }}
                                     />
-                                    : <Chip label={board.name} variant="outlined" onClick={() => setEditMode(true)} />
+                                    : <Chip label={board.name} variant="outlined" onClick={() => setEditMode(true)}/>
                             }
 
                             <BoardActions disableSpacing>
@@ -59,7 +64,7 @@ const Boards = () => {
                                     <DeleteIcon/>
                                 </IconButton>
                             </BoardActions>
-                        </Board>
+                        </BoardComponent>
                     </Grid>
                 ))}
             </BoardsGrid>
@@ -68,11 +73,6 @@ const Boards = () => {
             </AddButton>
         </Container>
     )
-}
-
-// TODO - Replace propTypes with proper typing
-Boards.propTypes = {
-    boards: Object
 }
 
 export default Boards
