@@ -2,9 +2,8 @@ import {model} from '../app';
 
 import {addBoard, deleteBoard, getBoards, updateBoard} from '../services/Board'
 
-import {Board} from "../model/board.model";
+import {Board} from 'trello-clone-shared/src/model/board.model'
 
-// TODO:: Type this
 export const resolvers = {
     Query: {
         getBoards: (): Promise<Board[]> => getBoards(model)

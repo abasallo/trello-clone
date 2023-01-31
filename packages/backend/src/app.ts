@@ -9,7 +9,6 @@ import {initialiseSequelize} from './orm/initialiseSequelize'
 import {AppModel} from "./orm/model/app.model";
 
 import {initialiseApolloServer} from "./graphql/init";
-
 export const app = express()
 
 export const model: Promise<AppModel> = initialiseSequelize()

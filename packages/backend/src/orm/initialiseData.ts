@@ -1,8 +1,10 @@
-import {User} from "../model/user.model";
-import {Board} from "../model/board.model";
+
 import {AppModel} from "./model/app.model";
 import {UserModel} from "./model/user.model";
 import {BoardModel} from "./model/board.model";
+
+import {User} from "trello-clone-shared/src/model/user.model";
+import {Board} from "trello-clone-shared/src/model/board.model";
 
 // TODO - Hash passwords
 const TestUser: User = {
