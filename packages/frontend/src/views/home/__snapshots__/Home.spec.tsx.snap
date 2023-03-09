@@ -30,7 +30,7 @@ exports[`Renders properly 1`] = `
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
         >
           <div
-            className="MuiPaper-root MuiCard-root sc-ftTHYK jxYlLc MuiPaper-elevation1 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root sc-ftTHYK kTvQLF MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
               className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -135,7 +135,7 @@ exports[`Renders properly 1`] = `
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
         >
           <div
-            className="MuiPaper-root MuiCard-root sc-ftTHYK jxYlLc MuiPaper-elevation1 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root sc-ftTHYK kTvQLF MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
               className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"

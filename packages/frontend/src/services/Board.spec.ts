@@ -7,6 +7,7 @@ import {ADD_BOARD, DELETE_BOARD, GET_BOARDS, UPDATE_BOARD} from './graphql/UserQ
 import {apolloClient} from "./graphql/apolloClient";
 
 jest.mock('./graphql/apolloClient')
+jest.mock('./Colour', () => ({fetchRandomColour: () => '#000000'}))
 
 describe('Boards Service', () => {
 
