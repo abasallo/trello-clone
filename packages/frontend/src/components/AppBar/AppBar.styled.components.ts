@@ -22,8 +22,3 @@ export const Logo = styled.img`
   height: auto;
   padding: 15px;
 `
-
-export const HeaderLoginButtons = styled.div`
-  margin-left: auto;
-  text-align: right;
-`

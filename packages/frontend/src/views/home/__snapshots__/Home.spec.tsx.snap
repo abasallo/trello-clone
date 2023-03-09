@@ -15,73 +15,22 @@ exports[`Renders properly 1`] = `
         className="sc-jSUZER vKmhv"
         src="logo.png"
       />
-      <div
-        className="sc-gKPRtg dFQrMT"
-      >
-        <button
-          className="MuiButtonBase-root MuiButton-root MuiButton-text"
-          disabled={false}
-          onBlur={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="MuiButton-label"
-          >
-            email
-          </span>
-        </button>
-        <button
-          className="MuiButtonBase-root MuiButton-root MuiButton-text"
-          disabled={false}
-          onBlur={[Function]}
-          onClick={[Function]}
-          onDragLeave={[Function]}
-          onFocus={[Function]}
-          onKeyDown={[Function]}
-          onKeyUp={[Function]}
-          onMouseDown={[Function]}
-          onMouseLeave={[Function]}
-          onMouseUp={[Function]}
-          onTouchEnd={[Function]}
-          onTouchMove={[Function]}
-          onTouchStart={[Function]}
-          tabIndex={0}
-          type="button"
-        >
-          <span
-            className="MuiButton-label"
-          >
-            Logout
-          </span>
-        </button>
-      </div>
     </div>
   </header>
   <div
     className="MuiContainer-root sc-gswNZR fsLIpU MuiContainer-maxWidthLg"
   >
     <div
-      className="MuiContainer-root sc-iBYQkv deFuDe MuiContainer-maxWidthLg"
+      className="MuiContainer-root sc-gKPRtg cyMLoJ MuiContainer-maxWidthLg"
     >
       <div
-        className="MuiGrid-root sc-ftTHYK bhbiZN MuiGrid-container MuiGrid-spacing-xs-2"
+        className="MuiGrid-root sc-iBYQkv fvMXDT MuiGrid-container MuiGrid-spacing-xs-2"
       >
         <div
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
         >
           <div
-            className="MuiPaper-root MuiCard-root sc-pyfCe yeDKJ MuiPaper-elevation1 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root sc-ftTHYK jxYlLc MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
               className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -107,7 +56,7 @@ exports[`Renders properly 1`] = `
               </span>
             </div>
             <div
-              className="MuiCardActions-root sc-jrcTuL deiqno"
+              className="MuiCardActions-root sc-pyfCe dMBzrj"
             >
               <button
                 aria-label="edit"
@@ -186,7 +135,7 @@ exports[`Renders properly 1`] = `
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
         >
           <div
-            className="MuiPaper-root MuiCard-root sc-pyfCe yeDKJ MuiPaper-elevation1 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root sc-ftTHYK jxYlLc MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
               className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -212,7 +161,7 @@ exports[`Renders properly 1`] = `
               </span>
             </div>
             <div
-              className="MuiCardActions-root sc-jrcTuL deiqno"
+              className="MuiCardActions-root sc-pyfCe dMBzrj"
             >
               <button
                 aria-label="edit"
@@ -290,7 +239,7 @@ exports[`Renders properly 1`] = `
       </div>
       <button
         aria-label="add"
-        className="MuiButtonBase-root MuiFab-root sc-kDvujY ceKRHx MuiFab-sizeMedium MuiFab-secondary"
+        className="MuiButtonBase-root MuiFab-root sc-jrcTuL cfZWEA MuiFab-sizeMedium MuiFab-secondary"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}

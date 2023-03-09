@@ -12,57 +12,6 @@ exports[`Renders properly 1`] = `
       className="sc-dkrFOg iWcAaZ"
       src="logo.png"
     />
-    <div
-      className="sc-hLBbgP hxUmR"
-    >
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-text"
-        disabled={false}
-        onBlur={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        >
-          host@server.tld
-        </span>
-      </button>
-      <button
-        className="MuiButtonBase-root MuiButton-root MuiButton-text"
-        disabled={false}
-        onBlur={[Function]}
-        onClick={[Function]}
-        onDragLeave={[Function]}
-        onFocus={[Function]}
-        onKeyDown={[Function]}
-        onKeyUp={[Function]}
-        onMouseDown={[Function]}
-        onMouseLeave={[Function]}
-        onMouseUp={[Function]}
-        onTouchEnd={[Function]}
-        onTouchMove={[Function]}
-        onTouchStart={[Function]}
-        tabIndex={0}
-        type="button"
-      >
-        <span
-          className="MuiButton-label"
-        >
-          Logout
-        </span>
-      </button>
-    </div>
   </div>
 </header>
 `;
