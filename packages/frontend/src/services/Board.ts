@@ -4,7 +4,7 @@ import {ADD_BOARD, DELETE_BOARD, GET_BOARDS, UPDATE_BOARD} from './graphql/UserQ
 
 import {Board} from 'trello-clone-shared/src/model/board.model'
 
-export const getBoards = async (): Promise<Board | undefined> => {
+export const getBoards = async (): Promise<Board[] | undefined> => {
     const {data} = await apolloClient.query({
         query: GET_BOARDS,
         variables: {}

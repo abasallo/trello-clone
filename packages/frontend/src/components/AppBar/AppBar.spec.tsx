@@ -5,7 +5,7 @@ import AppBar from './AppBar'
 
 test('Renders properly', () => expect(renderer
     .create(<AppBar user={{
-        email: 'host@server.tld',
         names: 'names',
-        surnames: 'surnames'
+        surnames: 'surnames',
+        email: 'host@server.tld',
     }}/>).toJSON()).toMatchSnapshot())

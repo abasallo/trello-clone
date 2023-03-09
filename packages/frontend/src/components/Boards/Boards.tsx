@@ -10,7 +10,8 @@ import {AddButton, BoardComponent, BoardActions, BoardsGrid, Container} from './
 
 import {useAppDispatch, useAppSelector} from '../../redux/hooks'
 import {AppDispatch} from '../../redux/store'
-import {addBoardAsyncThunk, deleteBoardAsyncThunk, updateBoardAsyncThunk} from '../../redux/slices/boardsSlice'
+
+import {addBoardAsyncThunk, deleteBoardAsyncThunk, updateBoardAsyncThunk} from '../../redux/thunks/boards.thunks'
 
 import {Board} from 'trello-clone-shared/src/model/board.model'
 
@@ -22,8 +23,7 @@ const updateButtonOnClick = (dispatch: AppDispatch, board: Board): void => {
 }
 
 const deleteButtonOnClick = (dispatch: AppDispatch, id?: number): void => {
-    if (id)
-        dispatch(deleteBoardAsyncThunk(id))
+    if (id) dispatch(deleteBoardAsyncThunk(id))
 }
 
 const Boards = () => {
@@ -33,7 +33,7 @@ const Boards = () => {
     const state = useAppSelector(state => state)
     const dispatch: AppDispatch = useAppDispatch()
 
-    const boards: Board[] = state.boards
+    const boards: Board[] = state.boards || []
 
     return (
         <Container>
