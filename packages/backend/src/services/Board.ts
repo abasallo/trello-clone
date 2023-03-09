@@ -37,7 +37,7 @@ export const deleteBoard = async ({
     id,
     model
 }: {
-    id: string
+    id: number
     model: Promise<AppModel>
 }): Promise<number> =>
     (await model).Board.destroy({where: {id}})
