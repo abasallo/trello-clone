@@ -6,6 +6,8 @@ NodeJS + GraphQL w/ Apollo + Sequelize + SQLite
 
 In the project directory, you must copy .env.example as .env a fill missing fields and/or modify already filled ones.
 
+If CONNECTION_URL is omitted in .env, the server defaults to in-memory (SQLite) initialised with sample data.
+
 In the project directory, you can run:
 
 ### `yarn`
@@ -40,6 +42,8 @@ Runs unit and integration tests.
 ## Docker
 
 This assumes Docker and Docker Compose are installed.
+
+If CONNECTION_URL is omitted in .env.docker, the server defaults to in-memory (SQLite) initialised with sample data.
 
 ### `docker-compose up`
 
