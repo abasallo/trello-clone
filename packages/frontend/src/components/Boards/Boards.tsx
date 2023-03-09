@@ -40,7 +40,7 @@ const Boards = () => {
             <BoardsGrid container spacing={2}>
                 {boards.map((board) => (
                     <Grid item xs={12} sm={6} md={4} lg={3} key={board.id}>
-                        <BoardComponent>
+                        <BoardComponent color={board.colour}>
                             {
                                 editMode
                                     ? <TextField id="standard-basic" label="Standard" variant="standard"

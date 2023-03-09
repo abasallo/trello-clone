@@ -17,6 +17,7 @@ export const BoardComponent = styled(Card)`
   margin: 10px;
   min-height: 100px;
   text-align: center;
+  background-color: ${props => props.color || '#000000'};
 `
 
 export const BoardActions = styled(CardActions)`

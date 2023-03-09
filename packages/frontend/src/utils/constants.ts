@@ -1,5 +1,13 @@
+const backendUrl: string = process.env.REACT_BACKEND_HOST && process.env.REACT_BACKEND_PORT
+    ? `http://${process.env.REACT_BACKEND_HOST}:${process.env.REACT_BACKEND_PORT}`
+    : 'http://localhost:4000'
 export default {
-    LOCAL_GRAPHQL_BACKEND_URL: 'http://localhost:4000/graphql',
+
+    BACKEND_URL: backendUrl,
+
+    GRAPHQL_BACKEND_URL: `${backendUrl}/graphql`,
+
+    COLOUR_ENDPOINT: `${backendUrl}/colour`,
 
     PATH_ROOT: '/',
 

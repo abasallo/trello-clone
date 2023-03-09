@@ -1,15 +1,27 @@
+import axios from 'axios'
+
 import {apolloClient} from './graphql/apolloClient'
 
 import {ADD_BOARD, DELETE_BOARD, GET_BOARDS, UPDATE_BOARD} from './graphql/UserQueries'
 
 import {Board} from 'trello-clone-shared/src/model/board.model'
+import constants from "../utils/constants";
 
 export const getBoards = async (): Promise<Board[] | undefined> => {
     const {data} = await apolloClient.query({
         query: GET_BOARDS,
         variables: {}
     })
-    return data.getBoards
+    const boards: Board[] | undefined = data.getBoards
+    if (!boards) return boards
+    for (const board of boards) {
+        const { data } = await axios({
+            method: 'get',
+            url: constants.COLOUR_ENDPOINT,
+        })
+        board.colour = data
+    }
+    return boards
 }
 
 export const addBoard = async (): Promise<Board | undefined> => {
