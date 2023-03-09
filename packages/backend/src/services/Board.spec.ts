@@ -2,13 +2,11 @@ import {getBoards, addBoard, updateBoard, deleteBoard} from './Board'
 import {AppModel} from '../orm/model/app.model'
 import {BoardModel} from '../orm/model/board.model'
 
-// TODO:: Extract?
 const board = {
     name: undefined,
     save: jest.fn()
 } as unknown as BoardModel
 
-// TODO:: Extract?
 const modelValue = {
     User: {},
     Board: {
@@ -24,7 +22,6 @@ const modelValue = {
     }
 }
 
-// TODO:: Extract?
 const model = Promise.resolve(modelValue) as unknown as Promise<AppModel>
 
 describe("Board Service", () => {
