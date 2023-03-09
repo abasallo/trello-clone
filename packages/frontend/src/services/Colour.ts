@@ -1,4 +1,4 @@
-import axios from "axios/index";
+import axios from "axios";
 import constants from "../utils/constants";
 
 export const fetchRandomColour = async (): Promise<string> => {
