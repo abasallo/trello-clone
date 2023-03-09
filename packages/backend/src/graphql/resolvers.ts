@@ -10,7 +10,7 @@ export const resolvers = {
     },
     Mutation: {
         addBoard: (parent: any, args: { board: Board }): Promise<Board> => addBoard({name: args.board.name, model}),
-        deleteBoard: (parent: any, args: { id: string }): Promise<number> => deleteBoard({id: args.id, model}),
+        deleteBoard: (parent: any, args: { id: number }): Promise<number> => deleteBoard({id: args.id, model}),
         updateBoard: (parent: any, args: { board: Board }): Promise<Board> => updateBoard({
             id: args.board.id,
             name: args.board.name,
