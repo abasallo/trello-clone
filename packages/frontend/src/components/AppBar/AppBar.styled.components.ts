@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import MaterialUIAppBar from '@material-ui/core/AppBar'
 import MaterialUIToolbar from '@material-ui/core/Toolbar'
 
-import {customMUITheme as theme} from '../../customMUITheme'
+import { customMUITheme as theme } from '../../customMUITheme'
 
 export const MaterialUIStyledAppBar = styled(MaterialUIAppBar)`
   background-color: #ffffff;

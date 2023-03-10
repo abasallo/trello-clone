@@ -39,6 +39,10 @@ In the project directory, you can run:
 
 Builds all projects.
 
+### `yarn lint`
+
+Run the linter for all projects.
+
 ### `yarn start`
 
 Starts all projects.

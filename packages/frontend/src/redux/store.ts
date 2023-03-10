@@ -1,16 +1,16 @@
-import {configureStore} from '@reduxjs/toolkit'
+import { configureStore } from '@reduxjs/toolkit'
 
 import userReducer from './slices/user.slice'
 import boardsReducer from './slices/boards.slice'
 
-import {fetchBoardsAsyncThunk} from './thunks/boards.thunks'
+import { fetchBoardsAsyncThunk } from './thunks/boards.thunks'
 
-export const reducer =  {
-    user: userReducer,
-    boards: boardsReducer,
+export const reducer = {
+  user: userReducer,
+  boards: boardsReducer
 }
 
-export const store = configureStore({reducer})
+export const store = configureStore({ reducer })
 
 store.dispatch(fetchBoardsAsyncThunk())
 

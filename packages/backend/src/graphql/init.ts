@@ -1,13 +1,15 @@
-import {ApolloServer} from 'apollo-server-express'
+import { Express } from 'express'
 
-import {typeDefs} from "./schema";
-import {resolvers} from './resolvers'
+import { ApolloServer } from 'apollo-server-express'
 
-import {model} from "../app";
+import { typeDefs } from './schema'
+import { resolvers } from './resolvers'
 
-const apolloServer = new ApolloServer({typeDefs, resolvers, context: {model}})
+import { model } from '../app'
 
-export const initialiseApolloServer = async (app: any): Promise<void> => {
-    await apolloServer.start()
-    apolloServer.applyMiddleware({app})
+const apolloServer = new ApolloServer({ typeDefs, resolvers, context: { model } })
+
+export const initialiseApolloServer = async (app: Express): Promise<void> => {
+  await apolloServer.start()
+  apolloServer.applyMiddleware({ app })
 }

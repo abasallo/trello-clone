@@ -1,4 +1,4 @@
-import {ADD_BOARD, GET_BOARDS} from './UserQueries'
+import { ADD_BOARD, GET_BOARDS } from './UserQueries'
 
 test('User add query must be initialized properly', () => expect(GET_BOARDS).toMatchSnapshot())
 

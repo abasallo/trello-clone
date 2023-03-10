@@ -1,11 +1,13 @@
-import HttpStatus from 'http-status-codes'
-
-import {Router} from 'express'
+import { Router, Request, Response } from 'express'
+import { errorWrapper } from '../errors'
 
 const router = Router()
 
-const randomHexColour = () => '#' + Math.floor(Math.random()*16777215).toString(16)
+const randomHexColour = () => '#' + Math.floor(Math.random() * 16777215).toString(16)
 
-router.get('/', async (req, res) => res.send(randomHexColour()))
+router.get(
+  '/',
+  errorWrapper(async (req: Request, res: Response) => res.send(randomHexColour()))
+)
 
 export default router

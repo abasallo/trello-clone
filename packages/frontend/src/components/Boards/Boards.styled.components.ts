@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-import {Card, CardActions, Fab, Grid} from '@material-ui/core'
+import { Card, CardActions, Fab, Grid } from '@material-ui/core'
 
 import MaterialUIContainer from '@material-ui/core/Container'
 
@@ -17,7 +17,7 @@ export const BoardComponent = styled(Card)`
   margin: 10px;
   min-height: 100px;
   text-align: center;
-  background-color: ${props => props.color || '#000000'};
+  background-color: ${(props) => props.color || '#000000'};
 `
 
 export const BoardActions = styled(CardActions)`

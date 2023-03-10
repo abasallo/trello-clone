@@ -5,12 +5,13 @@
   "private": true,
   "author": "alvaro@basallo.es",
   "scripts": {
+    "lint": "eslint . --fix --ext .ts",
     "start": "nodemon --watch 'src/**/*.ts' --exec 'tsc && node build/server.js'",
     "debug": "nodemon --watch 'src/**/*.ts' --exec 'tsc && node --inspect-brk build/server.js'",
     "build": "yarn build:typescript",
     "build:typescript": "tsc",
     "build:webpack": "yarn webpack",
-    "test": "jest ./src"
+    "test": "jest --runInBand ./src"
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.109",
