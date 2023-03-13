@@ -11,7 +11,8 @@
     "build": "yarn build:typescript",
     "build:typescript": "tsc",
     "build:webpack": "yarn webpack",
-    "test": "jest --runInBand ./src"
+    "test": "jest --runInBand ./src",
+    "e2e": "jest --runInBand ./e2e"
   },
   "dependencies": {
     "@types/aws-lambda": "^8.10.109",

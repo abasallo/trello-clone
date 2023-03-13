@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Server E2E tests Board E2E tests AddBoards 1`] = `
+{
+  "data": {
+    "addBoard": {
+      "id": Any<String>,
+      "name": "Board IV",
+    },
+  },
+}
+`;
+
+exports[`Server E2E tests Board E2E tests DeleteBoard 1`] = `
+{
+  "data": {
+    "deleteBoard": 1,
+  },
+}
+`;
+
+exports[`Server E2E tests Board E2E tests GetBoards 1`] = `
+{
+  "data": {
+    "getBoards": [
+      {
+        "id": "1",
+        "name": "Board I",
+      },
+      {
+        "id": "2",
+        "name": "Board II",
+      },
+      {
+        "id": "3",
+        "name": "Board III",
+      },
+    ],
+  },
+}
+`;
+
+exports[`Server E2E tests Board E2E tests UpdateBoard 1`] = `
+{
+  "data": {
+    "updateBoard": {
+      "id": Any<String>,
+      "name": "Board IV - Updated",
+    },
+  },
+}
+`;
+
+exports[`Server E2E tests Colour tests Expected response for Colour Endpoint 1`] = `"#323b63"`;
+
+exports[`Server E2E tests Health Check E2E tests Expected response for Health Check 1`] = `"OK"`;
