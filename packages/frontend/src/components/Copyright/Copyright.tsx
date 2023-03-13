@@ -3,7 +3,7 @@ import React from 'react'
 import Typography from '@material-ui/core/Typography'
 import Link from '@material-ui/core/Link'
 
-import constants from '../../utils/constants'
+import constants from '../../modules/constants'
 
 const Copyright = () => (
   <Typography variant="body2" color="textSecondary" align="center">

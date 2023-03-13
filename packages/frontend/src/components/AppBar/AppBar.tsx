@@ -2,7 +2,7 @@ import React from 'react'
 
 import logo from '../../images/logo.png'
 
-import constants from '../../utils/constants'
+import constants from '../../modules/constants'
 
 import { Logo, MaterialUIStyledAppBar, Toolbar } from './AppBar.styled.components'
 

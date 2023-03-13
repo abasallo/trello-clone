@@ -1,5 +1,9 @@
-import { ADD_BOARD, GET_BOARDS } from './UserQueries'
+import { GET_BOARDS, ADD_BOARD, UPDATE_BOARD, DELETE_BOARD } from './UserQueries'
 
-test('User add query must be initialized properly', () => expect(GET_BOARDS).toMatchSnapshot())
+test('Get Boards query be initialized properly', () => expect(GET_BOARDS).toMatchSnapshot())
 
-test('Password change query must be initialized properly', () => expect(ADD_BOARD).toMatchSnapshot())
+test('Add Board mutation must be initialized properly', () => expect(ADD_BOARD).toMatchSnapshot())
+
+test('Update Board mutation must be initialized properly', () => expect(UPDATE_BOARD).toMatchSnapshot())
+
+test('Delete Board mutation must be initialized properly', () => expect(DELETE_BOARD).toMatchSnapshot())

@@ -10,7 +10,7 @@ import { customMUITheme } from './customMUITheme'
 
 import Home from './views/home/Home'
 
-import constants from './utils/constants'
+import constants from './modules/constants'
 
 const App = () => (
   <MuiThemeProvider theme={customMUITheme}>
