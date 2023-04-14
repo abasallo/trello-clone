@@ -8,9 +8,9 @@ export const customMUITheme = createTheme({
         margin: '3px',
         '&:hover': {
           backgroundColor: '#E00201',
-          color: '#FFFFFF'
-        }
-      }
-    }
-  }
+          color: '#FFFFFF',
+        },
+      },
+    },
+  },
 })

@@ -4,6 +4,8 @@ test('Get Boards query be initialized properly', () => expect(GET_BOARDS).toMatc
 
 test('Add Board mutation must be initialized properly', () => expect(ADD_BOARD).toMatchSnapshot())
 
-test('Update Board mutation must be initialized properly', () => expect(UPDATE_BOARD).toMatchSnapshot())
+test('Update Board mutation must be initialized properly', () =>
+  expect(UPDATE_BOARD).toMatchSnapshot())
 
-test('Delete Board mutation must be initialized properly', () => expect(DELETE_BOARD).toMatchSnapshot())
+test('Delete Board mutation must be initialized properly', () =>
+  expect(DELETE_BOARD).toMatchSnapshot())

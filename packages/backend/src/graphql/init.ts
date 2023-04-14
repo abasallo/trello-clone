@@ -7,7 +7,11 @@ import { resolvers } from './resolvers'
 
 import { model } from '../app'
 
-const apolloServer = new ApolloServer({ typeDefs, resolvers, context: { model } })
+const apolloServer = new ApolloServer({
+  typeDefs,
+  resolvers,
+  context: { model },
+})
 
 export const initialiseApolloServer = async (app: Express): Promise<void> => {
   await apolloServer.start()

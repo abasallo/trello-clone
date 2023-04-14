@@ -11,7 +11,9 @@ const TEST_SERVER_PORT = 4001
 let server: http.Server
 
 beforeAll(async () => {
-  server = app.listen({ port: TEST_SERVER_PORT }, () => console.log(`Test Server initialised on port: ${TEST_SERVER_PORT}`))
+  server = app.listen({ port: TEST_SERVER_PORT }, () =>
+    console.log(`Test Server initialised on port: ${TEST_SERVER_PORT}`)
+  )
 })
 
 afterAll(() => {
@@ -25,7 +27,7 @@ describe('Server E2E tests', () => {
     test('Expected response for Health Check', async () => {
       const { status, statusText, data } = await axios({
         method: 'get',
-        url: `http://localhost:${TEST_SERVER_PORT}/`
+        url: `http://localhost:${TEST_SERVER_PORT}/`,
       })
 
       expect(status).toEqual(StatusCodes.OK)
@@ -39,7 +41,7 @@ describe('Server E2E tests', () => {
     test('Expected response for Colour Endpoint', async () => {
       const { status, statusText, data } = await axios({
         method: 'get',
-        url: `http://localhost:${TEST_SERVER_PORT}/colour`
+        url: `http://localhost:${TEST_SERVER_PORT}/colour`,
       })
 
       expect(status).toEqual(StatusCodes.OK)
@@ -65,10 +67,10 @@ describe('Server E2E tests', () => {
           `,
           variables: {
             board: {
-              name: 'Board IV'
-            }
-          }
-        }
+              name: 'Board IV',
+            },
+          },
+        },
       })
 
       expect(status).toEqual(StatusCodes.OK)
@@ -79,9 +81,9 @@ describe('Server E2E tests', () => {
       expect(data).toMatchSnapshot({
         data: {
           addBoard: {
-            id: expect.any(String)
-          }
-        }
+            id: expect.any(String),
+          },
+        },
       })
     })
 
@@ -101,10 +103,10 @@ describe('Server E2E tests', () => {
           variables: {
             board: {
               id: addedBoardId,
-              name: 'Board IV - Updated'
-            }
-          }
-        }
+              name: 'Board IV - Updated',
+            },
+          },
+        },
       })
 
       expect(status).toEqual(StatusCodes.OK)
@@ -113,9 +115,9 @@ describe('Server E2E tests', () => {
       expect(data).toMatchSnapshot({
         data: {
           updateBoard: {
-            id: expect.any(String)
-          }
-        }
+            id: expect.any(String),
+          },
+        },
       })
     })
 
@@ -130,9 +132,9 @@ describe('Server E2E tests', () => {
           }
         `,
           variables: {
-            id: addedBoardId
-          }
-        }
+            id: addedBoardId,
+          },
+        },
       })
 
       expect(status).toEqual(StatusCodes.OK)
@@ -153,8 +155,8 @@ describe('Server E2E tests', () => {
                   name
                 }
               }
-            `
-        }
+            `,
+        },
       })
 
       expect(status).toEqual(StatusCodes.OK)

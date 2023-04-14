@@ -17,5 +17,5 @@ export default {
 
   LOGO_ALT: 'Logo',
 
-  LOGOUT: 'Logout'
+  LOGOUT: 'Logout',
 }

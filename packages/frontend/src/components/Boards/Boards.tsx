@@ -6,12 +6,22 @@ import EditIcon from '@mui/icons-material/Edit'
 
 import { Chip, Grid, IconButton, TextField } from '@material-ui/core'
 
-import { AddButton, BoardComponent, BoardActions, BoardsGrid, Container } from './Boards.styled.components'
+import {
+  AddButton,
+  BoardComponent,
+  BoardActions,
+  BoardsGrid,
+  Container,
+} from './Boards.styled.components'
 
 import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { AppDispatch } from '../../redux/store'
 
-import { addBoardAsyncThunk, deleteBoardAsyncThunk, updateBoardAsyncThunk } from '../../redux/thunks/boards.thunks'
+import {
+  addBoardAsyncThunk,
+  deleteBoardAsyncThunk,
+  updateBoardAsyncThunk,
+} from '../../redux/thunks/boards.thunks'
 
 import { Board } from 'trello-clone-shared/src/model/board.model'
 
@@ -45,7 +55,7 @@ const Boards = () => {
           onBlur={(e) => {
             updateButtonOnClick(dispatch, {
               id: board.id,
-              name: e.target.value
+              name: e.target.value,
             })
             setEditMode(false)
           }}
@@ -67,7 +77,10 @@ const Boards = () => {
                 <IconButton aria-label="edit" onClick={() => setEditMode(true)}>
                   <EditIcon />
                 </IconButton>
-                <IconButton aria-label="delete" onClick={() => deleteButtonOnClick(dispatch, board.id)}>
+                <IconButton
+                  aria-label="delete"
+                  onClick={() => deleteButtonOnClick(dispatch, board.id)}
+                >
                   <DeleteIcon />
                 </IconButton>
               </BoardActions>
@@ -75,7 +88,12 @@ const Boards = () => {
           </Grid>
         ))}
       </BoardsGrid>
-      <AddButton size="medium" color="secondary" aria-label="add" onClick={() => addButtonOnClick(dispatch)}>
+      <AddButton
+        size="medium"
+        color="secondary"
+        aria-label="add"
+        onClick={() => addButtonOnClick(dispatch)}
+      >
         <AddIcon />
       </AddButton>
     </Container>

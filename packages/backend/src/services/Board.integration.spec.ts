@@ -23,7 +23,10 @@ describe('Boards Service', () => {
   describe('addBoard', () => {
     const newBoardName = 'Board IV'
     test(`name is set as expected: ${newBoardName}`, async () => {
-      const newBoard: Board = await addBoard({ name: newBoardName, model: testModel })
+      const newBoard: Board = await addBoard({
+        name: newBoardName,
+        model: testModel,
+      })
       expect(newBoard.name).toEqual(newBoardName)
       expect(await (await testModel).Board.count()).toEqual(4)
     })
@@ -32,7 +35,11 @@ describe('Boards Service', () => {
   describe('updateBoard', () => {
     const updatedBoardName = 'Board I updated'
     test(`name is set as expected: ${updatedBoardName}`, async () => {
-      const updatedBoard: Board = await updateBoard({ id: 1, name: updatedBoardName, model: testModel })
+      const updatedBoard: Board = await updateBoard({
+        id: 1,
+        name: updatedBoardName,
+        model: testModel,
+      })
       expect(updatedBoard.name).toEqual(updatedBoardName)
       expect((await (await testModel).Board.findByPk(1)).name).toEqual(updatedBoardName)
     })
@@ -40,7 +47,10 @@ describe('Boards Service', () => {
 
   describe('deleteBoard', () => {
     test('number of elements is as expected', async () => {
-      const numberOfDeletedBoards: number = await deleteBoard({ id: 1, model: testModel })
+      const numberOfDeletedBoards: number = await deleteBoard({
+        id: 1,
+        model: testModel,
+      })
       expect(numberOfDeletedBoards).toEqual(1)
       expect(await (await testModel).Board.count()).toEqual(3)
     })

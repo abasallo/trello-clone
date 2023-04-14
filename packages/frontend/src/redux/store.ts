@@ -5,7 +5,7 @@ import boardsReducer from './slices/boards.slice'
 import { fetchBoardsAsyncThunk } from './thunks/boards.thunks'
 
 export const reducer = {
-  boards: boardsReducer
+  boards: boardsReducer,
 }
 
 export const store = configureStore({ reducer })

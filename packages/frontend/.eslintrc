@@ -14,6 +14,7 @@
   ],
   "plugins": ["@typescript-eslint"],
   "rules": {
-    "space-before-function-paren": "off"
+    "space-before-function-paren": "off",
+    "comma-dangle": "off"
   }
 }

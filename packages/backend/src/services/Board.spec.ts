@@ -4,7 +4,7 @@ import { BoardModel } from '../orm/model/board.model'
 
 const board = {
   name: undefined,
-  save: jest.fn()
+  save: jest.fn(),
 } as unknown as BoardModel
 
 const modelValue = {
@@ -19,8 +19,8 @@ const modelValue = {
         return undefined
       }
     }),
-    destroy: jest.fn()
-  }
+    destroy: jest.fn(),
+  },
 }
 
 const model = Promise.resolve(modelValue) as unknown as Promise<AppModel>

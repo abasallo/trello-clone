@@ -1,4 +1,9 @@
-import { addBoardReducer, deleteBoardReducer, fetchBoardsReducer, updateBoardReducer } from './boards.reducers'
+import {
+  addBoardReducer,
+  deleteBoardReducer,
+  fetchBoardsReducer,
+  updateBoardReducer,
+} from './boards.reducers'
 
 import { Board } from 'trello-clone-shared/src/model/board.model'
 

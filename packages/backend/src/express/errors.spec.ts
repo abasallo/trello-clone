@@ -8,7 +8,7 @@ describe('Error Middleware & Utils', () => {
     const req = {} as Request
     const res = {
       status: jest.fn(),
-      send: jest.fn()
+      send: jest.fn(),
     } as unknown as Response
     const next = jest.fn()
 

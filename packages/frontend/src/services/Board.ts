@@ -9,7 +9,7 @@ import { fetchRandomColour } from './Colour'
 export const getBoards = async (): Promise<Board[] | undefined> => {
   const { data } = await apolloClient.query({
     query: GET_BOARDS,
-    variables: {}
+    variables: {},
   })
   const boards: Board[] | undefined = data.getBoards
   if (!boards) return boards
@@ -22,11 +22,11 @@ export const getBoards = async (): Promise<Board[] | undefined> => {
 export const addBoard = async (): Promise<Board | undefined> => {
   try {
     const board = {
-      name: 'New Board'
+      name: 'New Board',
     }
     const { data } = await apolloClient.mutate({
       mutation: ADD_BOARD,
-      variables: { board }
+      variables: { board },
     })
     data.addBoard.colour = await fetchRandomColour()
     return data.addBoard
@@ -40,7 +40,7 @@ export const updateBoard = async (board: Board): Promise<Board | undefined> => {
   try {
     const { data } = await apolloClient.mutate({
       mutation: UPDATE_BOARD,
-      variables: { board }
+      variables: { board },
     })
     data.updateBoard.colour = await fetchRandomColour()
     return data.updateBoard
@@ -54,7 +54,7 @@ export const deleteBoard = async (id: number): Promise<number> => {
   try {
     const { data } = await apolloClient.mutate({
       mutation: DELETE_BOARD,
-      variables: { id }
+      variables: { id },
     })
     return data.deleteBoard
   } catch (error) {

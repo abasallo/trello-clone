@@ -6,5 +6,5 @@ import constants from '../../modules/constants'
 
 export const apolloClient = new ApolloClient({
   link: createHttpLink({ uri: constants.GRAPHQL_BACKEND_URL }),
-  cache: new InMemoryCache()
+  cache: new InMemoryCache(),
 })

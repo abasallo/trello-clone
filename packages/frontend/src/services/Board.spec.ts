@@ -15,7 +15,7 @@ describe('Boards Service', () => {
     const result = await getBoards()
     expect(apolloClient.query).toHaveBeenCalledWith({
       query: GET_BOARDS,
-      variables: {}
+      variables: {},
     })
     if (result) {
       expect(result[0].name).toEqual('name')
@@ -39,7 +39,7 @@ describe('Boards Service', () => {
     const result = await updateBoard(board)
     expect(apolloClient.mutate).toHaveBeenCalledWith({
       mutation: UPDATE_BOARD,
-      variables: { board }
+      variables: { board },
     })
     if (result) {
       expect(result.name).toEqual('Updated Board')
@@ -51,7 +51,7 @@ describe('Boards Service', () => {
     const result = await deleteBoard(1)
     expect(apolloClient.mutate).toHaveBeenCalledWith({
       mutation: DELETE_BOARD,
-      variables: { id: 1 }
+      variables: { id: 1 },
     })
     if (result) {
       expect(result).toEqual(1)
