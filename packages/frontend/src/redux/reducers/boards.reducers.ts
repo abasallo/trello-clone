@@ -1,20 +1,18 @@
+import { PayloadAction } from '@reduxjs/toolkit'
+
 import { Board } from 'trello-clone-shared/src/model/board.model'
 
-// TODO:: Type this actions, if it makes sense
-// eslint-disable-next-line  @typescript-eslint/no-explicit-any
-export const fetchBoardsReducer = (state: Board[], action: { payload: any }) => action.payload
+export const fetchBoardsReducer = (state: Board[], action: PayloadAction<Board[] | undefined>) => {
+  return action.payload
+}
 
-// TODO:: Type this actions, if it makes sense
-// eslint-disable-next-line  @typescript-eslint/no-explicit-any
-export const addBoardReducer = (state: Board[], action: any) => {
+export const addBoardReducer = (state: Board[], action: PayloadAction<Board | undefined>) => {
   if (action.payload) {
     state.push(action.payload)
   }
 }
 
-// TODO:: Type this actions, if it makes sense
-// eslint-disable-next-line  @typescript-eslint/no-explicit-any
-export const updateBoardReducer = (state: Board[], action: any) => {
+export const updateBoardReducer = (state: Board[], action: PayloadAction<Board | undefined>) => {
   if (action.payload) {
     const index = state.findIndex(({ id }) => id === action?.payload?.id)
     if (index !== -1) {
@@ -24,9 +22,7 @@ export const updateBoardReducer = (state: Board[], action: any) => {
   }
 }
 
-// TODO:: Type this actions, if it makes sense
-// eslint-disable-next-line  @typescript-eslint/no-explicit-any
-export const deleteBoardReducer = (state: Board[], action: any) => {
+export const deleteBoardReducer = (state: Board[], action: PayloadAction<number>) => {
   const index = state.findIndex(({ id }) => {
     return id === action.payload
   })

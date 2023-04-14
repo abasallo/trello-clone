@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+import { useSelector, useDispatch } from 'react-redux'
+
 import AddIcon from '@mui/icons-material/Add'
 import DeleteIcon from '@mui/icons-material/Delete'
 import EditIcon from '@mui/icons-material/Edit'
@@ -14,7 +16,6 @@ import {
   Container,
 } from './Boards.styled.components'
 
-import { useAppDispatch, useAppSelector } from '../../redux/hooks'
 import { AppDispatch } from '../../redux/store'
 
 import {
@@ -24,6 +25,7 @@ import {
 } from '../../redux/thunks/boards.thunks'
 
 import { Board } from 'trello-clone-shared/src/model/board.model'
+import { selectBoards } from '../../redux/slices/boards.slice'
 
 const addButtonOnClick = (dispatch: AppDispatch): void => {
   dispatch(addBoardAsyncThunk())
@@ -39,10 +41,9 @@ const deleteButtonOnClick = (dispatch: AppDispatch, id?: number): void => {
 const Boards = () => {
   const [editMode, setEditMode] = useState(false)
 
-  const state = useAppSelector((state) => state)
-  const dispatch: AppDispatch = useAppDispatch()
+  const dispatch: AppDispatch = useDispatch()
 
-  const boards: Board[] = state.boards || []
+  const boards: Board[] = useSelector(selectBoards)
 
   const conditionalRender = (editMode: boolean, board: Board) => {
     if (editMode) {

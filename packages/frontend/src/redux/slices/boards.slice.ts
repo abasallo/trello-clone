@@ -16,6 +16,8 @@ import {
   updateBoardReducer,
 } from '../reducers/boards.reducers'
 
+import { RootState } from '../store'
+
 const initialState: Board[] = []
 
 const boardSlice = createSlice({
@@ -31,4 +33,5 @@ const boardSlice = createSlice({
   },
 })
 
+export const selectBoards = (state: RootState): Board[] => state.boards
 export default boardSlice.reducer
