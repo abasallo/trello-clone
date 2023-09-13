@@ -2,35 +2,35 @@
 
 exports[`Renders properly 1`] = `
 <div
-  className="MuiContainer-root sc-bcXHqe jqKekN MuiContainer-maxWidthLg"
+  className="MuiContainer-root sc-aXZVg lliveU MuiContainer-maxWidthLg"
 >
   <header
-    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-hLBbgP vFixJ MuiPaper-elevation4"
+    className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-fqkvVR hurEES MuiPaper-elevation4"
   >
     <div
-      className="MuiToolbar-root MuiToolbar-regular sc-eDvSVe gQXxLM MuiToolbar-gutters"
+      className="MuiToolbar-root MuiToolbar-regular sc-dcJsrY ifEvFs MuiToolbar-gutters"
     >
       <img
         alt="Logo"
-        className="sc-jSUZER vKmhv"
+        className="sc-iGgWBj dhYaGG"
         src="logo.png"
       />
     </div>
   </header>
   <div
-    className="MuiContainer-root sc-gswNZR fsLIpU MuiContainer-maxWidthLg"
+    className="MuiContainer-root sc-gEvEer dFiugx MuiContainer-maxWidthLg"
   >
     <div
-      className="MuiContainer-root sc-gKPRtg cyMLoJ MuiContainer-maxWidthLg"
+      className="MuiContainer-root sc-gsFSXq dQepsW MuiContainer-maxWidthLg"
     >
       <div
-        className="MuiGrid-root sc-iBYQkv fvMXDT MuiGrid-container MuiGrid-spacing-xs-2"
+        className="MuiGrid-root sc-kAyceB jgcRxI MuiGrid-container MuiGrid-spacing-xs-2"
       >
         <div
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
         >
           <div
-            className="MuiPaper-root MuiCard-root sc-ftTHYK kTvQLF MuiPaper-elevation1 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root sc-imWYAI cttmjx MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
               className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -56,7 +56,7 @@ exports[`Renders properly 1`] = `
               </span>
             </div>
             <div
-              className="MuiCardActions-root sc-pyfCe dMBzrj"
+              className="MuiCardActions-root sc-jXbUNg fAOfqU"
             >
               <button
                 aria-label="edit"
@@ -135,7 +135,7 @@ exports[`Renders properly 1`] = `
           className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
         >
           <div
-            className="MuiPaper-root MuiCard-root sc-ftTHYK kTvQLF MuiPaper-elevation1 MuiPaper-rounded"
+            className="MuiPaper-root MuiCard-root sc-imWYAI cttmjx MuiPaper-elevation1 MuiPaper-rounded"
           >
             <div
               className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -161,7 +161,7 @@ exports[`Renders properly 1`] = `
               </span>
             </div>
             <div
-              className="MuiCardActions-root sc-pyfCe dMBzrj"
+              className="MuiCardActions-root sc-jXbUNg fAOfqU"
             >
               <button
                 aria-label="edit"
@@ -239,7 +239,7 @@ exports[`Renders properly 1`] = `
       </div>
       <button
         aria-label="add"
-        className="MuiButtonBase-root MuiFab-root sc-jrcTuL cfZWEA MuiFab-sizeMedium MuiFab-secondary"
+        className="MuiButtonBase-root MuiFab-root sc-dhKdcB dTdcoy MuiFab-sizeMedium MuiFab-secondary"
         disabled={false}
         onBlur={[Function]}
         onClick={[Function]}
@@ -275,7 +275,7 @@ exports[`Renders properly 1`] = `
     </div>
   </div>
   <div
-    className="MuiBox-root MuiBox-root-1 sc-dkrFOg iGnWti"
+    className="MuiBox-root MuiBox-root-1 sc-eqUAAy ezmbrv"
   >
     <p
       className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-alignCenter"

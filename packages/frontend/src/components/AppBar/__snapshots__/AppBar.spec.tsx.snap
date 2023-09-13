@@ -2,14 +2,14 @@
 
 exports[`Renders properly 1`] = `
 <header
-  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-bcXHqe eaoBhD MuiPaper-elevation4"
+  className="MuiPaper-root MuiAppBar-root MuiAppBar-positionStatic MuiAppBar-colorPrimary sc-aXZVg ilsJmy MuiPaper-elevation4"
 >
   <div
-    className="MuiToolbar-root MuiToolbar-regular sc-gswNZR cYoTxS MuiToolbar-gutters"
+    className="MuiToolbar-root MuiToolbar-regular sc-gEvEer dJDDFH MuiToolbar-gutters"
   >
     <img
       alt="Logo"
-      className="sc-dkrFOg iWcAaZ"
+      className="sc-eqUAAy gTomNI"
       src="logo.png"
     />
   </div>

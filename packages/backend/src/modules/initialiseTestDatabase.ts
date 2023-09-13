@@ -1,7 +1,7 @@
 import { initialiseSequelize } from '../orm/initialiseSequelize'
 import { AppModel } from '../orm/model/app.model'
 
-const TEST_CONNECTION_URL = 'sqlite://motorway-takehome-backend.test.sqlite'
+const TEST_CONNECTION_URL = 'sqlite://trello-clone.test.sqlite'
 
 let testModel: AppModel
 

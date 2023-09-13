@@ -2,16 +2,16 @@
 
 exports[`Renders properly 1`] = `
 <div
-  className="MuiContainer-root sc-bcXHqe bRLOeJ MuiContainer-maxWidthLg"
+  className="MuiContainer-root sc-aXZVg fvSgwA MuiContainer-maxWidthLg"
 >
   <div
-    className="MuiGrid-root sc-gswNZR fsLIpU MuiGrid-container MuiGrid-spacing-xs-2"
+    className="MuiGrid-root sc-gEvEer dFiugx MuiGrid-container MuiGrid-spacing-xs-2"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
     >
       <div
-        className="MuiPaper-root MuiCard-root sc-dkrFOg fzWWjy MuiPaper-elevation1 MuiPaper-rounded"
+        className="MuiPaper-root MuiCard-root sc-eqUAAy jSQBPn MuiPaper-elevation1 MuiPaper-rounded"
       >
         <div
           className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -37,7 +37,7 @@ exports[`Renders properly 1`] = `
           </span>
         </div>
         <div
-          className="MuiCardActions-root sc-hLBbgP YyCSN"
+          className="MuiCardActions-root sc-fqkvVR kDBPdq"
         >
           <button
             aria-label="edit"
@@ -116,7 +116,7 @@ exports[`Renders properly 1`] = `
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 MuiGrid-grid-sm-6 MuiGrid-grid-md-4 MuiGrid-grid-lg-3"
     >
       <div
-        className="MuiPaper-root MuiCard-root sc-dkrFOg fzWWjy MuiPaper-elevation1 MuiPaper-rounded"
+        className="MuiPaper-root MuiCard-root sc-eqUAAy jSQBPn MuiPaper-elevation1 MuiPaper-rounded"
       >
         <div
           className="MuiButtonBase-root MuiChip-root MuiChip-outlined MuiChip-clickable"
@@ -142,7 +142,7 @@ exports[`Renders properly 1`] = `
           </span>
         </div>
         <div
-          className="MuiCardActions-root sc-hLBbgP YyCSN"
+          className="MuiCardActions-root sc-fqkvVR kDBPdq"
         >
           <button
             aria-label="edit"
@@ -220,7 +220,7 @@ exports[`Renders properly 1`] = `
   </div>
   <button
     aria-label="add"
-    className="MuiButtonBase-root MuiFab-root sc-eDvSVe gPAfeZ MuiFab-sizeMedium MuiFab-secondary"
+    className="MuiButtonBase-root MuiFab-root sc-dcJsrY hSHtjJ MuiFab-sizeMedium MuiFab-secondary"
     disabled={false}
     onBlur={[Function]}
     onClick={[Function]}
